@@ -7,17 +7,19 @@
 
 import Foundation
 import UIKit
-class BlueButton:UIButton {
+class RoundButton:UIButton {
     override func awakeFromNib() {
         super.awakeFromNib()
         
         self.configuration = UIButton.Configuration.plain()
         layer.cornerRadius = 4
-        self.backgroundColor = UIColor(red: 0.0, green: 0.25, blue: 0.8, alpha: 1.0)
-        self.setTitleColor(.white, for: .normal)
-        self.tintColor = .white
-        self.setTitle("test", for: .normal)
-        self.setSFImage(SFSymbolSystemName: "arrow.right", pointSize: 20, placement: .trailing, imagePadding: 5)
+        
+    }
+    
+    func setColors(bgColor:UIColor, tintColor:UIColor, titleColor:UIColor) {
+        self.backgroundColor = bgColor
+        self.setTitleColor(titleColor, for: .normal)
+        self.tintColor = tintColor
     }
     
     func setSFImage(SFSymbolSystemName:String, pointSize:CGFloat, placement:NSDirectionalRectEdge, imagePadding:CGFloat) {

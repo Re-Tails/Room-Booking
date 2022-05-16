@@ -3,41 +3,87 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Room_Booking" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Room_Booking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="odh-EN-nLD">
-                                <rect key="frame" x="159" y="503" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Student ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="odh-EN-nLD" customClass="RoundTextField" customModule="Room_Booking" customModuleProvider="target">
+                                <rect key="frame" x="50" y="562" width="314" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="LRl-Gp-T8L"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1cx-pN-5B5">
-                                <rect key="frame" x="159" y="570" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1cx-pN-5B5" customClass="RoundTextField" customModule="Room_Booking" customModuleProvider="target">
+                                <rect key="frame" x="50" y="632" width="314" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="whr-m4-DJC"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lSO-19-558" customClass="BlueButton" customModule="Room_Booking" customModuleProvider="target">
-                                <rect key="frame" x="97" y="641" width="220" height="137"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lC1-GJ-oXX" customClass="RoundButton" customModule="Room_Booking" customModuleProvider="target">
+                                <rect key="frame" x="50" y="702" width="314" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="KeF-tC-AZU"/>
+                                </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IvO-tn-zgT">
+                                <rect key="frame" x="50" y="404" width="107" height="48"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="UTSLogo" translatesAutoresizingMaskIntoConstraints="NO" id="6GA-kQ-Q7t">
+                                <rect key="frame" x="116" y="144" width="182" height="182"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UTSPattern" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fS4-YB-jhQ">
+                                <rect key="frame" x="0.0" y="762" width="414" height="134"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="GrayBackground"/>
+                        <constraints>
+                            <constraint firstItem="1cx-pN-5B5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="4Tb-Yg-2ke"/>
+                            <constraint firstItem="IvO-tn-zgT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="HCR-y9-FXR"/>
+                            <constraint firstItem="1cx-pN-5B5" firstAttribute="top" secondItem="odh-EN-nLD" secondAttribute="bottom" constant="30" id="Hgs-Fk-w7V"/>
+                            <constraint firstItem="lC1-GJ-oXX" firstAttribute="top" secondItem="1cx-pN-5B5" secondAttribute="bottom" constant="30" id="KcA-fI-YFw"/>
+                            <constraint firstItem="6GA-kQ-Q7t" firstAttribute="top" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="Ocv-s5-nLW"/>
+                            <constraint firstItem="fS4-YB-jhQ" firstAttribute="top" secondItem="lC1-GJ-oXX" secondAttribute="bottom" id="Q0V-WO-va2"/>
+                            <constraint firstItem="lC1-GJ-oXX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="VcG-h5-qCA"/>
+                            <constraint firstItem="odh-EN-nLD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="WZK-v0-2Po"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1cx-pN-5B5" secondAttribute="trailing" constant="50" id="XwK-An-OHh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lC1-GJ-oXX" secondAttribute="trailing" constant="50" id="YfP-U2-xis"/>
+                            <constraint firstItem="IvO-tn-zgT" firstAttribute="top" secondItem="6GA-kQ-Q7t" secondAttribute="bottom" constant="78" id="byr-zm-sYw"/>
+                            <constraint firstItem="fS4-YB-jhQ" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="cDm-7b-1Vy"/>
+                            <constraint firstItem="fS4-YB-jhQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kw5-xz-W5a"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fS4-YB-jhQ" secondAttribute="trailing" id="l1m-37-dU9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lC1-GJ-oXX" secondAttribute="bottom" constant="100" id="l4N-cK-OoV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="odh-EN-nLD" secondAttribute="trailing" constant="50" id="s0J-3D-Rls"/>
+                            <constraint firstItem="6GA-kQ-Q7t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tz4-nC-buS"/>
+                            <constraint firstItem="odh-EN-nLD" firstAttribute="top" secondItem="IvO-tn-zgT" secondAttribute="bottom" constant="30" id="xom-5N-KG6"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginButton" destination="lC1-GJ-oXX" id="tdR-7H-pIX"/>
+                        <outlet property="passwordTextField" destination="1cx-pN-5B5" id="b3x-i8-F4j"/>
+                        <outlet property="studentIDTextField" destination="odh-EN-nLD" id="BNm-iH-FP4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -45,6 +91,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="UTSLogo" width="182" height="182"/>
+        <image name="UTSPattern" width="1380" height="578"/>
+        <namedColor name="GrayBackground">
+            <color red="0.92156862745098034" green="0.92156862745098034" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
