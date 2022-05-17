@@ -16,6 +16,7 @@
 		83A0E2982828C7E10092E39B /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A0E2972828C7E10092E39B /* RoundButton.swift */; };
 		83BEF30F2831FF6B00C7ADF4 /* RoundTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BEF30E2831FF6B00C7ADF4 /* RoundTextField.swift */; };
 		83BEF31128320CCD00C7ADF4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BEF31028320CCD00C7ADF4 /* LoginViewController.swift */; };
+		D10484832833866F00E51167 /* SearchBookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10484822833866F00E51167 /* SearchBookingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		83A0E2972828C7E10092E39B /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		83BEF30E2831FF6B00C7ADF4 /* RoundTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTextField.swift; sourceTree = "<group>"; };
 		83BEF31028320CCD00C7ADF4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D10484822833866F00E51167 /* SearchBookingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchBookingViewController.swift; path = "../../../../Downloads/Room-Booking-main/Room Booking/Controller/SearchBookingViewController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				83A0E2842828C0BA0092E39B /* ViewController.swift */,
+				D10484822833866F00E51167 /* SearchBookingViewController.swift */,
 				83BEF31028320CCD00C7ADF4 /* LoginViewController.swift */,
 			);
 			path = Controller;
@@ -173,6 +176,7 @@
 			files = (
 				83BEF31128320CCD00C7ADF4 /* LoginViewController.swift in Sources */,
 				83A0E2852828C0BA0092E39B /* ViewController.swift in Sources */,
+				D10484832833866F00E51167 /* SearchBookingViewController.swift in Sources */,
 				83A0E2812828C0BA0092E39B /* AppDelegate.swift in Sources */,
 				83BEF30F2831FF6B00C7ADF4 /* RoundTextField.swift in Sources */,
 				83A0E2832828C0BA0092E39B /* SceneDelegate.swift in Sources */,
