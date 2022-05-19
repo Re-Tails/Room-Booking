@@ -16,9 +16,10 @@
 		83A0E2982828C7E10092E39B /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A0E2972828C7E10092E39B /* RoundButton.swift */; };
 		83BEF30F2831FF6B00C7ADF4 /* RoundTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BEF30E2831FF6B00C7ADF4 /* RoundTextField.swift */; };
 		83BEF31128320CCD00C7ADF4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BEF31028320CCD00C7ADF4 /* LoginViewController.swift */; };
-		D10484832833866F00E51167 /* SearchBookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10484822833866F00E51167 /* SearchBookingViewController.swift */; };
 		D16B4FE02834D5D100428A6E /* BookingMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16B4FDF2834D5D100428A6E /* BookingMainViewController.swift */; };
 		D16B4FE22834D5E500428A6E /* MyBookingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16B4FE12834D5E500428A6E /* MyBookingsViewController.swift */; };
+		D1E7C4F62836155600324E0A /* SearchBookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7C4F52836155600324E0A /* SearchBookingViewController.swift */; };
+		D1E7C4F82836198A00324E0A /* ExperimentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7C4F72836198A00324E0A /* ExperimentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,9 +34,10 @@
 		83A0E2972828C7E10092E39B /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		83BEF30E2831FF6B00C7ADF4 /* RoundTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTextField.swift; sourceTree = "<group>"; };
 		83BEF31028320CCD00C7ADF4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		D10484822833866F00E51167 /* SearchBookingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchBookingViewController.swift; path = "../../../../Downloads/Room-Booking-main/Room Booking/Controller/SearchBookingViewController.swift"; sourceTree = "<group>"; };
 		D16B4FDF2834D5D100428A6E /* BookingMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingMainViewController.swift; sourceTree = "<group>"; };
 		D16B4FE12834D5E500428A6E /* MyBookingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookingsViewController.swift; sourceTree = "<group>"; };
+		D1E7C4F52836155600324E0A /* SearchBookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBookingViewController.swift; sourceTree = "<group>"; };
+		D1E7C4F72836198A00324E0A /* ExperimentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +103,9 @@
 			isa = PBXGroup;
 			children = (
 				83A0E2842828C0BA0092E39B /* ViewController.swift */,
-				D10484822833866F00E51167 /* SearchBookingViewController.swift */,
+				D1E7C4F52836155600324E0A /* SearchBookingViewController.swift */,
 				D16B4FE12834D5E500428A6E /* MyBookingsViewController.swift */,
+				D1E7C4F72836198A00324E0A /* ExperimentViewController.swift */,
 				D16B4FDF2834D5D100428A6E /* BookingMainViewController.swift */,
 				83BEF31028320CCD00C7ADF4 /* LoginViewController.swift */,
 			);
@@ -182,12 +185,13 @@
 			files = (
 				83BEF31128320CCD00C7ADF4 /* LoginViewController.swift in Sources */,
 				83A0E2852828C0BA0092E39B /* ViewController.swift in Sources */,
-				D10484832833866F00E51167 /* SearchBookingViewController.swift in Sources */,
 				83A0E2812828C0BA0092E39B /* AppDelegate.swift in Sources */,
 				83BEF30F2831FF6B00C7ADF4 /* RoundTextField.swift in Sources */,
 				D16B4FE22834D5E500428A6E /* MyBookingsViewController.swift in Sources */,
+				D1E7C4F82836198A00324E0A /* ExperimentViewController.swift in Sources */,
 				83A0E2832828C0BA0092E39B /* SceneDelegate.swift in Sources */,
 				83A0E2982828C7E10092E39B /* RoundButton.swift in Sources */,
+				D1E7C4F62836155600324E0A /* SearchBookingViewController.swift in Sources */,
 				D16B4FE02834D5D100428A6E /* BookingMainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
