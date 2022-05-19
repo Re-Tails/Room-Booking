@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E26969428337FA80093BC85 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E26969328337FA80093BC85 /* DashboardViewController.swift */; };
 		83A0E2812828C0BA0092E39B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A0E2802828C0BA0092E39B /* AppDelegate.swift */; };
 		83A0E2832828C0BA0092E39B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A0E2822828C0BA0092E39B /* SceneDelegate.swift */; };
 		83A0E2852828C0BA0092E39B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A0E2842828C0BA0092E39B /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E26969328337FA80093BC85 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		83A0E27D2828C0BA0092E39B /* Room Booking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Room Booking.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83A0E2802828C0BA0092E39B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83A0E2822828C0BA0092E39B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			children = (
 				83A0E2842828C0BA0092E39B /* ViewController.swift */,
 				83BEF31028320CCD00C7ADF4 /* LoginViewController.swift */,
+				4E26969328337FA80093BC85 /* DashboardViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83BEF31128320CCD00C7ADF4 /* LoginViewController.swift in Sources */,
+				4E26969428337FA80093BC85 /* DashboardViewController.swift in Sources */,
 				83A0E2852828C0BA0092E39B /* ViewController.swift in Sources */,
 				83A0E2812828C0BA0092E39B /* AppDelegate.swift in Sources */,
 				83BEF30F2831FF6B00C7ADF4 /* RoundTextField.swift in Sources */,

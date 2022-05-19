@@ -11,18 +11,21 @@ class RoundButton:UIButton {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        self.configuration = UIButton.Configuration.plain()
-        layer.cornerRadius = 4
+        
+        self.layer.cornerRadius = 4
+        self.layer.masksToBounds = true
         
     }
     
     func setColors(bgColor:UIColor, tintColor:UIColor, titleColor:UIColor) {
+        
         self.backgroundColor = bgColor
         self.setTitleColor(titleColor, for: .normal)
         self.tintColor = tintColor
     }
     
     func setSFImage(SFSymbolSystemName:String, pointSize:CGFloat, placement:NSDirectionalRectEdge, imagePadding:CGFloat) {
+        self.configuration = UIButton.Configuration.plain()
         let img = UIImage(systemName: SFSymbolSystemName)
         self.configuration?.preferredSymbolConfigurationForImage = UIImage.SymbolConfiguration(pointSize: pointSize)
         self.configuration?.imagePlacement = placement
