@@ -32,7 +32,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         // If search button is clicked.... put this into a method
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        layout.sectionInset = UIEdgeInsets(top: 10, left: 3, bottom: 330, right: 5)
         layout.itemSize = CGSize(width: view.frame.width, height: 147)
 
         collectionview = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
@@ -123,6 +123,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
                 button.setTitle("Confirm Booking", for: .normal)
                 button.titleLabel?.font = UIFont.systemFont(ofSize:(18))
                 button.setTitleColor(UIColor.white, for: .normal)
+                button.backgroundColor = UIColor.lightGray
                 button.translatesAutoresizingMaskIntoConstraints = false
                 return button
             }()
@@ -177,8 +178,8 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
                 buildingImageView.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
                 buildingImageView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - 20).isActive = true
 
-                confirmButton.topAnchor.constraint(equalTo: timeLabel.bottomAnchor, constant: 15).isActive = true
-                confirmButton.leftAnchor.constraint(equalTo: buildingLabel.leftAnchor).isActive = true
+                confirmButton.topAnchor.constraint(equalTo: timeLabel.bottomAnchor, constant: 10).isActive = true
+                confirmButton.rightAnchor.constraint(equalTo: rightAnchor, constant: -2).isActive = true
                 
                 //starttime - endtime
                 timeLabel.topAnchor.constraint(equalTo: dateLabel.bottomAnchor, constant: 15).isActive = true
