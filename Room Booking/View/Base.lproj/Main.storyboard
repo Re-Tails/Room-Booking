@@ -361,6 +361,9 @@
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button" backgroundImage="Building11"/>
+                                        <connections>
+                                            <segue destination="wuL-sz-wjy" kind="show" id="3Vv-d5-M6x"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ln6-MV-BUx">
                                         <rect key="frame" x="159.5" y="0.0" width="154.5" height="382"/>
@@ -370,12 +373,18 @@
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Button" backgroundImage="Building2"/>
+                                                <connections>
+                                                    <segue destination="wuL-sz-wjy" kind="show" id="c5F-6B-4jS"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EHw-Sv-Gkj" userLabel="Building 6 Button" customClass="RoundButton" customModule="Room_Booking" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="193.5" width="154.5" height="188.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Button" backgroundImage="Building6"/>
+                                                <connections>
+                                                    <segue destination="wuL-sz-wjy" kind="show" id="JHe-8w-sMh"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -482,6 +491,9 @@
             <point key="canvasLocation" x="1689.8550724637682" y="83.705357142857139"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="JHe-8w-sMh"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Building11" width="263" height="364"/>
         <image name="Building2" width="600" height="600"/>
