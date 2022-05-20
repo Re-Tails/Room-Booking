@@ -12,22 +12,21 @@ import Foundation
 
 class Booking: CustomStringConvertible {
     
-    var building: String = ""
-    var level: String = ""
-    var room: String = ""
+    var location: BLocation
+    var startTime: BTime
+    var endTime: BTime
     
-    var startTime: BookingTime
-    var endTime: BookingTime
-    
-    public var description: String { return "\(building).\(level).\(room) \(startTime) \(endTime)" }
+    public var description: String { return "\(location) \(startTime) \(endTime)" }
     
     init(_ location: String, _ startTime: String, _ endTime: String) {
-        let locationArray: [String] = location.components(separatedBy: ".")
-        building = locationArray[0]
-        level = locationArray[1]
-        room = locationArray[2]
-        
-        self.startTime = BookingTime(startTime)
-        self.endTime = BookingTime(endTime)
+        self.location = BLocation(location)
+        self.startTime = BTime(startTime)
+        self.endTime = BTime(endTime)
+    }
+    
+    init(_ location: BLocation, _ startTime: BTime, _ endTime: BTime) {
+        self.location = location
+        self.startTime = startTime
+        self.endTime = endTime
     }
 }

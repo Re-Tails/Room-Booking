@@ -6,7 +6,7 @@
 //
 
 import Foundation
-class BookingTime: CustomStringConvertible {
+class BTime: CustomStringConvertible {
     var hours: String = "";
     var minutes: String = "";
     

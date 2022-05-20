@@ -11,29 +11,42 @@ import Foundation
 class BookingDatabase {
     private let database = Database.database().reference()
     
-    var b6: [Int] = []
-    var b2: [Int] = []
-    var b11: [Int] = []
+    var ref: DatabaseReference! = Database.database().reference()
+    var databaseHandle: DatabaseHandle?
     
-    var bookings: [Booking] = []
+    var b6: [String] =  ["06_06_113"]
+    var b2: [String] =  ["02_06_167"]
+    var b11: [String] = ["11_05_300"]
     
-    func addBooking(building: String, level: String, room: String, start_time: BookingTime, end_time: BookingTime) {
+    var testiboi: Any = []
+        
+    func addBooking(booking: Booking) {
+        // key is 06.06.113
+        // value is [(10:00 -> 10:30), (10:30 -> 11:00)]
+        
         let object: [String: Any] = [
-            "name": "rob bob" as NSObject,
-            "dog": "cody"
+            "times": ["10_00", "10_30", "10_30", "11_00"]
         ]
         
-        database.child("something_22").setValue(object)
+        database.child("06_06_113").setValue(object)
     }
     
-    func getBooking() {
-        database.child("something_22").observeSingleEvent(of: .value, with: { snapshot in
-            guard let value = snapshot.value as? [String: Any] else {
-                print("and you failed")
-                return
+    func someFuck(values: [String]) {
+        testiboi = values
+    }
+    
+    func getBooking(booking: Booking) {
+        print("searching for \(booking.location.description)")
+        database.child(booking.location.description).observeSingleEvent(of: .value, with: { snapshot in
+            if let value = snapshot.value as? [String: [String]] {
+                self.testiboi = value["times"]!
             }
             
-            print("Value \(value)")
+            //print("Value \(value)")
         })
+    }
+    
+    func deleteBooking(booking: Booking) {
+        database.child(booking.location.description).removeValue()
     }
 }

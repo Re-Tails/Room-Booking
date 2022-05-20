@@ -20,9 +20,10 @@
 		D16B4FE02834D5D100428A6E /* BookingMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16B4FDF2834D5D100428A6E /* BookingMainViewController.swift */; };
 		D16B4FE22834D5E500428A6E /* MyBookingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16B4FE12834D5E500428A6E /* MyBookingsViewController.swift */; };
 		EF59259F2836400F002EF777 /* BookingDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF59259E2836400F002EF777 /* BookingDatabase.swift */; };
-		EF5925A1283641E5002EF777 /* BookingTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5925A0283641E5002EF777 /* BookingTime.swift */; };
+		EF5925A1283641E5002EF777 /* BTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5925A0283641E5002EF777 /* BTime.swift */; };
 		EF5925A328364B63002EF777 /* Booking.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5925A228364B63002EF777 /* Booking.swift */; };
 		EF6F199828361F5100D286FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF6F199728361F5100D286FA /* GoogleService-Info.plist */; };
+		EFDA15BA28377927006FEE4E /* BLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDA15B928377927006FEE4E /* BLocation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,9 +44,10 @@
 		D16B4FDF2834D5D100428A6E /* BookingMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingMainViewController.swift; sourceTree = "<group>"; };
 		D16B4FE12834D5E500428A6E /* MyBookingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookingsViewController.swift; sourceTree = "<group>"; };
 		EF59259E2836400F002EF777 /* BookingDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDatabase.swift; sourceTree = "<group>"; };
-		EF5925A0283641E5002EF777 /* BookingTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingTime.swift; sourceTree = "<group>"; };
+		EF5925A0283641E5002EF777 /* BTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTime.swift; sourceTree = "<group>"; };
 		EF5925A228364B63002EF777 /* Booking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Booking.swift; sourceTree = "<group>"; };
 		EF6F199728361F5100D286FA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EFDA15B928377927006FEE4E /* BLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLocation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,8 +111,9 @@
 				83A0E2972828C7E10092E39B /* RoundButton.swift */,
 				83BEF30E2831FF6B00C7ADF4 /* RoundTextField.swift */,
 				EF59259E2836400F002EF777 /* BookingDatabase.swift */,
-				EF5925A0283641E5002EF777 /* BookingTime.swift */,
+				EF5925A0283641E5002EF777 /* BTime.swift */,
 				EF5925A228364B63002EF777 /* Booking.swift */,
+				EFDA15B928377927006FEE4E /* BLocation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -260,8 +263,9 @@
 			files = (
 				83BEF31128320CCD00C7ADF4 /* LoginViewController.swift in Sources */,
 				EF5925A328364B63002EF777 /* Booking.swift in Sources */,
+				EFDA15BA28377927006FEE4E /* BLocation.swift in Sources */,
 				83A0E2852828C0BA0092E39B /* ViewController.swift in Sources */,
-				EF5925A1283641E5002EF777 /* BookingTime.swift in Sources */,
+				EF5925A1283641E5002EF777 /* BTime.swift in Sources */,
 				83A0E2812828C0BA0092E39B /* AppDelegate.swift in Sources */,
 				83BEF30F2831FF6B00C7ADF4 /* RoundTextField.swift in Sources */,
 				D16B4FE22834D5E500428A6E /* MyBookingsViewController.swift in Sources */,
