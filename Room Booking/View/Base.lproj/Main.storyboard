@@ -325,6 +325,7 @@
         <!--Booking-->
         <scene sceneID="B3w-gA-SmB">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c4g-U4-94z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="0WR-1z-Fee" customClass="BookingMainViewController" customModule="Room_Booking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nqD-0Y-v9v">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -373,10 +374,13 @@
                                 <buttonConfiguration key="configuration" style="plain" image="image 5"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpM-DU-15N" customClass="RoundButton" customModule="Room_Booking" customModuleProvider="target">
-                                <rect key="frame" x="215" y="274" width="179" height="139"/>
+                                <rect key="frame" x="194" y="274" width="222" height="139"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="image 4"/>
+                                <buttonConfiguration key="configuration" style="plain" image="image 4" title="button"/>
+                                <connections>
+                                    <segue destination="wuL-sz-wjy" kind="show" id="ACF-dV-byo"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ksj-UU-WWN"/>
@@ -391,9 +395,60 @@
                         <outlet property="myBookingsButton" destination="fHH-uv-Nfg" id="PUH-Zc-stu"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="c4g-U4-94z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="776.81159420289862" y="83.705357142857139"/>
+        </scene>
+        <!--Time Booking View Controller-->
+        <scene sceneID="Iuj-YZ-nN8">
+            <objects>
+                <viewController id="wuL-sz-wjy" customClass="TimeBookingViewController" customModule="Room_Booking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QTq-Ax-qln">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="me2-qL-TX1">
+                                <rect key="frame" x="58" y="85" width="40" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="&lt;">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FKl-C7-4Xk">
+                                <rect key="frame" x="328" y="85" width="40" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="&gt;">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                </buttonConfiguration>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YEr-0f-Q4J">
+                                <rect key="frame" x="0.0" y="126" width="414" height="770"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BUILDINGNO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pE0-iI-fHM">
+                                <rect key="frame" x="133" y="92" width="148" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="L7V-et-zbc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2AC-0S-kKc"/>
+                    <connections>
+                        <outlet property="leftButton" destination="me2-qL-TX1" id="2Qk-WJ-8Xd"/>
+                        <outlet property="rightButton" destination="FKl-C7-4Xk" id="zFL-PF-0Q2"/>
+                        <outlet property="roomLabel" destination="pE0-iI-fHM" id="GDP-G8-TNK"/>
+                        <outlet property="timeContainer" destination="YEr-0f-Q4J" id="SZS-g2-t93"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rgf-hi-rHU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1689.8550724637682" y="83.705357142857139"/>
         </scene>
     </scenes>
     <resources>
