@@ -28,9 +28,17 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         // Create an instance of UICollectionViewFlowLayout since you cant
         // Initialize UICollectionViewwithout a layout
         
-        
-        
         // If search button is clicked.... put this into a method
+
+    
+
+        func prepare(imageNo: String, buildingNo: Int, floorNo: Int, roomNo: Int, dateNo: Int, startTime: Int, endTime: Int){
+            
+        }
+    
+    }
+
+    @IBAction func searchDatabase(_ sender: Any) {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 10, left: 3, bottom: 330, right: 5)
         layout.itemSize = CGSize(width: view.frame.width, height: 147)
@@ -52,165 +60,157 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     // This returns the amount of views
             func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-                return 10
+                return 4
             }
     
-        func prepare(imageNo: String, buildingNo: Int, floorNo: Int, roomNo: Int, dateNo: Int, startTime: Int, endTime: Int){
-            
-        }
-    
-    
-    
-    
-    
-    
-        }
-
         class FreelancerCell: UICollectionViewCell {
 
             let buildingImageView: UIImageView = {
-                
-                let imageView = UIImageView()
-                imageView.backgroundColor = UIColor.white
-                imageView.image = UIImage(named: "image 3")
-                imageView.frame = CGRect(x: 0, y: 0, width: 150, height: 150)
-                return imageView
-            }()
             
-            let buildingLabel: UILabel = {
-                let label = UILabel()
-                label.textColor = UIColor.white
-                label.font = UIFont.systemFont(ofSize:(18))
-                label.text = "Building/floor/room"
-                label.translatesAutoresizingMaskIntoConstraints = false
-                return label
-            }()
-
-            let dateLabel: UILabel = {
-                let label = UILabel()
-                label.font = UIFont.systemFont(ofSize:(14))
-                label.textColor = UIColor.white
-                label.text = "Date: "
-                label.translatesAutoresizingMaskIntoConstraints = false
-                return label
-            }()
-
-            let timeLabel: UILabel = {
-                let label = UILabel()
-                label.textColor = UIColor.white
-                label.font = UIFont.systemFont(ofSize:(14))
-                label.text = "Starttime - Endtime"
-                label.translatesAutoresizingMaskIntoConstraints = false
-                return label
-            }()
-
-            let topSeparatorView: UIView = {
-                let view = UIView()
-                view.backgroundColor = UIColor.darkGray
-                view.translatesAutoresizingMaskIntoConstraints = false
-                return view
-            }()
-
-            let bottomSeparatorView: UIView = {
-                let view = UIView()
-                view.backgroundColor = UIColor.darkGray
-                view.translatesAutoresizingMaskIntoConstraints = false
-                return view
-            }()
-
-            let confirmButton: UIButton = {
-                let button = UIButton()
-                button.setTitle("Confirm Booking", for: .normal)
-                button.titleLabel?.font = UIFont.systemFont(ofSize:(18))
-                button.setTitleColor(UIColor.white, for: .normal)
-                button.backgroundColor = UIColor.lightGray
-                button.translatesAutoresizingMaskIntoConstraints = false
-                return button
-            }()
-
-
-
-            let stackView: UIStackView = {
-                let sv = UIStackView()
-                sv.axis  = NSLayoutConstraint.Axis.horizontal
-                sv.alignment = UIStackView.Alignment.center
-                sv.distribution = UIStackView.Distribution.fillEqually
-                sv.translatesAutoresizingMaskIntoConstraints = false;
-                return sv
-            }()
-
-            override init(frame: CGRect) {
-                super.init(frame: frame)
-
-                addViews()
-            }
-
-            func addViews(){
-                backgroundColor = UIColor.black
-
-              //  addSubview(profileImageButton)
-                addSubview(dateLabel)
-             //   addSubview(distanceLabel)
-                addSubview(buildingLabel)
-             //   addSubview(ratingLabel)
-                addSubview(buildingImageView)
-                addSubview(timeLabel)
-
-              //  addSubview(topSeparatorView)
-              //  addSubview(bottomSeparatorView)
-
-                // Stack View
-                addSubview(confirmButton)
+            let imageView = UIImageView()
+            imageView.backgroundColor = UIColor.white
+            imageView.image = UIImage(named: "image 3")
+            imageView.frame = CGRect(x: 0, y: 0, width: 150, height: 150)
+            return imageView
+        }()
         
-                //addSubview(stackView)
+        let buildingLabel: UILabel = {
+            let label = UILabel()
+            label.textColor = UIColor.white
+            label.font = UIFont.systemFont(ofSize:(18))
+            label.text = "Building/floor/room"
+            label.translatesAutoresizingMaskIntoConstraints = false
+            return label
+        }()
 
-                //Date:
-                dateLabel.topAnchor.constraint(equalTo: buildingLabel.bottomAnchor, constant: 15).isActive = true
-                dateLabel.leftAnchor.constraint(equalTo: buildingLabel.leftAnchor).isActive = true
-                
-                //Building/floor/room
-                buildingLabel.topAnchor.constraint(equalTo: topAnchor, constant: 15).isActive = true
-                buildingLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: 10).isActive = true
-                //pricePerHourLabel.centerYAnchor.constraint(equalTo: showCaseImageView.centerYAnchor).isActive = true
+        let dateLabel: UILabel = {
+            let label = UILabel()
+            label.font = UIFont.systemFont(ofSize:(14))
+            label.textColor = UIColor.white
+            label.text = "Date: "
+            label.translatesAutoresizingMaskIntoConstraints = false
+            return label
+        }()
 
-                buildingImageView.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
-                buildingImageView.rightAnchor.constraint(equalTo: buildingLabel.leftAnchor, constant: -20).isActive = true
-                buildingImageView.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
-                buildingImageView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - 20).isActive = true
+        let timeLabel: UILabel = {
+            let label = UILabel()
+            label.textColor = UIColor.white
+            label.font = UIFont.systemFont(ofSize:(14))
+            label.text = "Starttime - Endtime"
+            label.translatesAutoresizingMaskIntoConstraints = false
+            return label
+        }()
 
-                confirmButton.topAnchor.constraint(equalTo: timeLabel.bottomAnchor, constant: 10).isActive = true
-                confirmButton.rightAnchor.constraint(equalTo: rightAnchor, constant: -2).isActive = true
-                
-                //starttime - endtime
-                timeLabel.topAnchor.constraint(equalTo: dateLabel.bottomAnchor, constant: 15).isActive = true
-                timeLabel.leftAnchor.constraint(equalTo: buildingLabel.leftAnchor).isActive = true
+        let topSeparatorView: UIView = {
+            let view = UIView()
+            view.backgroundColor = UIColor.darkGray
+            view.translatesAutoresizingMaskIntoConstraints = false
+            return view
+        }()
 
-                //topSeparatorView.topAnchor.constraint(equalTo: likesLabel.bottomAnchor, constant: 10).isActive = true
-               // topSeparatorView.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
-               // topSeparatorView.heightAnchor.constraint(equalToConstant: 0.5).isActive = true
+        let bottomSeparatorView: UIView = {
+            let view = UIView()
+            view.backgroundColor = UIColor.darkGray
+            view.translatesAutoresizingMaskIntoConstraints = false
+            return view
+        }()
 
-                //stackView.addArrangedSubview(likeButton)
-               // stackView.addArrangedSubview(hireButton)
-               // stackView.addArrangedSubview(messageButton)
-
-                //stackView.topAnchor.constraint(equalTo: topSeparatorView.bottomAnchor, constant: 4).isActive = true
-               // stackView.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
-               // stackView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-
-               // bottomSeparatorView.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 4).isActive = true
-               // bottomSeparatorView.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
-               // bottomSeparatorView.heightAnchor.constraint(equalToConstant: 0.5).isActive = true
-
-
-            }
+        let confirmButton: UIButton = {
+            let button = UIButton()
+            button.setTitle("Confirm Booking", for: .normal)
+            button.titleLabel?.font = UIFont.systemFont(ofSize:(18))
+            button.setTitleColor(UIColor.white, for: .normal)
+            button.backgroundColor = UIColor.lightGray
+            button.translatesAutoresizingMaskIntoConstraints = false
+            return button
+        }()
 
 
 
-            required init?(coder aDecoder: NSCoder) {
-                fatalError("init(coder:) has not been implemented")
-            }
+        let stackView: UIStackView = {
+            let sv = UIStackView()
+            sv.axis  = NSLayoutConstraint.Axis.horizontal
+            sv.alignment = UIStackView.Alignment.center
+            sv.distribution = UIStackView.Distribution.fillEqually
+            sv.translatesAutoresizingMaskIntoConstraints = false;
+            return sv
+        }()
+
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+
+            addViews()
+        }
+
+        func addViews(){
+            backgroundColor = UIColor.black
+
+          //  addSubview(profileImageButton)
+            addSubview(dateLabel)
+         //   addSubview(distanceLabel)
+            addSubview(buildingLabel)
+         //   addSubview(ratingLabel)
+            addSubview(buildingImageView)
+            addSubview(timeLabel)
+
+          //  addSubview(topSeparatorView)
+          //  addSubview(bottomSeparatorView)
+
+            // Stack View
+            addSubview(confirmButton)
+    
+            //addSubview(stackView)
+
+            //Date:
+            dateLabel.topAnchor.constraint(equalTo: buildingLabel.bottomAnchor, constant: 15).isActive = true
+            dateLabel.leftAnchor.constraint(equalTo: buildingLabel.leftAnchor).isActive = true
+            
+            //Building/floor/room
+            buildingLabel.topAnchor.constraint(equalTo: topAnchor, constant: 15).isActive = true
+            buildingLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: 10).isActive = true
+            //pricePerHourLabel.centerYAnchor.constraint(equalTo: showCaseImageView.centerYAnchor).isActive = true
+
+            buildingImageView.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
+            buildingImageView.rightAnchor.constraint(equalTo: buildingLabel.leftAnchor, constant: -20).isActive = true
+            buildingImageView.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
+            buildingImageView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - 20).isActive = true
+
+            confirmButton.topAnchor.constraint(equalTo: timeLabel.bottomAnchor, constant: 10).isActive = true
+            confirmButton.rightAnchor.constraint(equalTo: rightAnchor, constant: -2).isActive = true
+            
+            //starttime - endtime
+            timeLabel.topAnchor.constraint(equalTo: dateLabel.bottomAnchor, constant: 15).isActive = true
+            timeLabel.leftAnchor.constraint(equalTo: buildingLabel.leftAnchor).isActive = true
+
+            //topSeparatorView.topAnchor.constraint(equalTo: likesLabel.bottomAnchor, constant: 10).isActive = true
+           // topSeparatorView.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
+           // topSeparatorView.heightAnchor.constraint(equalToConstant: 0.5).isActive = true
+
+            //stackView.addArrangedSubview(likeButton)
+           // stackView.addArrangedSubview(hireButton)
+           // stackView.addArrangedSubview(messageButton)
+
+            //stackView.topAnchor.constraint(equalTo: topSeparatorView.bottomAnchor, constant: 4).isActive = true
+           // stackView.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
+           // stackView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+
+           // bottomSeparatorView.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 4).isActive = true
+           // bottomSeparatorView.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
+           // bottomSeparatorView.heightAnchor.constraint(equalToConstant: 0.5).isActive = true
+
 
         }
+
+
+
+        required init?(coder aDecoder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+
+    }
+    }
+
+
 
 
 
