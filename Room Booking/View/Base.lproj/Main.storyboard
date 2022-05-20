@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I6l-lG-Rx7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -59,16 +59,16 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="0WR-1z-Fee" kind="show" id="cdA-Rg-IP5"/>
+                                    <segue destination="hCO-hk-Azn" kind="show" id="PDO-UF-fRD"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IvO-tn-zgT">
-                                <rect key="frame" x="50" y="404" width="107" height="48"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IvO-tn-zgT">
+                                <rect key="frame" x="50" y="404" width="107" height="128"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="UTSLogo" translatesAutoresizingMaskIntoConstraints="NO" id="6GA-kQ-Q7t">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="252" image="UTSLogo" translatesAutoresizingMaskIntoConstraints="NO" id="6GA-kQ-Q7t">
                                 <rect key="frame" x="116" y="144" width="182" height="182"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UTSPattern" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fS4-YB-jhQ">
@@ -370,81 +370,115 @@
             </objects>
             <point key="canvasLocation" x="1510" y="781"/>
         </scene>
-        <!--Booking-->
-        <scene sceneID="B3w-gA-SmB">
+        
+
+
+        <!--Dashboard View Controller-->
+        <scene sceneID="gMg-0H-FDA">
             <objects>
-                <viewController id="0WR-1z-Fee" customClass="BookingMainViewController" customModule="Room_Booking" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="nqD-0Y-v9v">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <viewController id="hCO-hk-Azn" customClass="DashboardViewController" customModule="Room_Booking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sbg-Hg-ug2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A1b-cv-0fR">
-                                <rect key="frame" x="20" y="127" width="374" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Up Coming Bookings:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NIh-xn-ubP">
-                                <rect key="frame" x="123.64779874212854" y="99" width="165" height="20.999999999999886"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upcoming Booking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25L-nj-kth" userLabel="Upcoming Bookings Text Field">
+                                <rect key="frame" x="50" y="74" width="275" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                <color key="textColor" name="SharedBlue"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgk-dD-997" customClass="RoundButton" customModule="Room_Booking" customModuleProvider="target">
-                                <rect key="frame" x="12" y="274" width="207" height="349"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ic-wE-dtA" userLabel="Upcoming Booking Button" customClass="RoundButton" customModule="Room_Booking" customModuleProvider="target">
+                                <rect key="frame" x="50" y="130" width="314" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="jut-t4-9qy"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="image 3" imagePlacement="bottom"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpM-DU-15N" customClass="RoundButton" customModule="Room_Booking" customModuleProvider="target">
-                                <rect key="frame" x="215" y="274" width="179" height="139"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="image 4"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZU-bk-52o" customClass="RoundButton" customModule="Room_Booking" customModuleProvider="target">
-                                <rect key="frame" x="152" y="665" width="111" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Book by Date"/>
-                                <connections>
-                                    <segue destination="NHn-j0-NNP" kind="show" id="No1-iI-33q"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHH-uv-Nfg" customClass="RoundButton" customModule="Room_Booking" customModuleProvider="target">
-                                <rect key="frame" x="153" y="722" width="107" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="My Bookings"/>
-                                <connections>
-                                    <segue destination="6KF-9g-qKG" kind="show" id="S1z-VM-j3t"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyK-EY-jlv" customClass="RoundButton" customModule="Room_Booking" customModuleProvider="target">
-                                <rect key="frame" x="215" y="399" width="179" height="221"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="image 5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book by Campus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IRP-PQ-ZB6" userLabel="Book by Campus Text Field">
+                                <rect key="frame" x="50" y="220" width="243.5" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                <color key="textColor" name="SharedBlue"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="BQf-aA-LDB">
+                                <rect key="frame" x="50" y="276" width="314" height="406"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4E-sH-wpy" userLabel="Building 11 Button" customClass="RoundButton" customModule="Room_Booking" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="154.5" height="406"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button" backgroundImage="Building11"/>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ln6-MV-BUx">
+                                        <rect key="frame" x="159.5" y="0.0" width="154.5" height="406"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ehu-BF-8wa" userLabel="Building 2 Button" customClass="RoundButton" customModule="Room_Booking" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="154.5" height="200.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button" backgroundImage="Building2"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EHw-Sv-Gkj" userLabel="Building 6 Button" customClass="RoundButton" customModule="Room_Booking" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="205.5" width="154.5" height="200.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button" backgroundImage="Building6"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D1i-uj-yES" userLabel="Book by Date" customClass="RoundButton" customModule="Room_Booking" customModuleProvider="target">
+                                <rect key="frame" x="50" y="712" width="314" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Pc9-WO-5pJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Book by Date"/>
                             </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="ksj-UU-WWN"/>
+                        <viewLayoutGuide key="safeArea" id="Kdf-1f-Hjt"/>
                         <color key="backgroundColor" name="GrayBackground"/>
+                        <constraints>
+                            <constraint firstItem="BQf-aA-LDB" firstAttribute="centerX" secondItem="Sbg-Hg-ug2" secondAttribute="centerX" id="7B0-HY-A6r"/>
+                            <constraint firstItem="Kdf-1f-Hjt" firstAttribute="trailing" secondItem="D1i-uj-yES" secondAttribute="trailing" constant="50" id="8Jw-KI-H5n"/>
+                            <constraint firstItem="7Ic-wE-dtA" firstAttribute="centerX" secondItem="Sbg-Hg-ug2" secondAttribute="centerX" id="DDp-0i-6SH"/>
+                            <constraint firstItem="D1i-uj-yES" firstAttribute="top" secondItem="BQf-aA-LDB" secondAttribute="bottom" constant="30" id="E5k-W5-Wq2"/>
+                            <constraint firstItem="IRP-PQ-ZB6" firstAttribute="top" secondItem="7Ic-wE-dtA" secondAttribute="bottom" constant="30" id="EYs-PB-Y7r"/>
+                            <constraint firstItem="BQf-aA-LDB" firstAttribute="leading" secondItem="Kdf-1f-Hjt" secondAttribute="leading" constant="50" id="MSt-or-ndn"/>
+                            <constraint firstItem="D1i-uj-yES" firstAttribute="centerX" secondItem="Sbg-Hg-ug2" secondAttribute="centerX" id="Uwt-Uj-3fv"/>
+                            <constraint firstItem="7Ic-wE-dtA" firstAttribute="top" secondItem="25L-nj-kth" secondAttribute="bottom" constant="20" id="Vfh-bc-vda"/>
+                            <constraint firstItem="25L-nj-kth" firstAttribute="top" secondItem="Kdf-1f-Hjt" secondAttribute="top" constant="30" id="YJo-mY-dBH"/>
+                            <constraint firstItem="Kdf-1f-Hjt" firstAttribute="bottom" secondItem="D1i-uj-yES" secondAttribute="bottom" constant="30" id="ZTR-xj-IYl"/>
+                            <constraint firstItem="Kdf-1f-Hjt" firstAttribute="trailing" secondItem="BQf-aA-LDB" secondAttribute="trailing" constant="50" id="gSn-OU-zF4"/>
+                            <constraint firstItem="D1i-uj-yES" firstAttribute="leading" secondItem="Kdf-1f-Hjt" secondAttribute="leading" constant="50" id="ggY-Je-dSz"/>
+                            <constraint firstItem="25L-nj-kth" firstAttribute="leading" secondItem="Kdf-1f-Hjt" secondAttribute="leading" constant="50" id="qtL-US-jMS"/>
+                            <constraint firstItem="Kdf-1f-Hjt" firstAttribute="trailing" secondItem="7Ic-wE-dtA" secondAttribute="trailing" constant="50" id="rZC-gM-wtc"/>
+                            <constraint firstItem="BQf-aA-LDB" firstAttribute="top" secondItem="IRP-PQ-ZB6" secondAttribute="bottom" constant="20" id="tSN-fi-xZT"/>
+                            <constraint firstItem="7Ic-wE-dtA" firstAttribute="leading" secondItem="Kdf-1f-Hjt" secondAttribute="leading" constant="50" id="uU3-GW-1Ul"/>
+                            <constraint firstItem="IRP-PQ-ZB6" firstAttribute="leading" secondItem="Kdf-1f-Hjt" secondAttribute="leading" constant="50" id="zJn-Kv-D59"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Booking" id="nSl-6e-ac6"/>
+                    <navigationItem key="navigationItem" id="JPq-cb-lX9"/>
                     <connections>
-                        <outlet property="bookByDateButton" destination="eZU-bk-52o" id="6dm-cl-9s7"/>
-                        <outlet property="building11Button" destination="bgk-dD-997" id="d9s-PQ-7Bf"/>
-                        <outlet property="building2Button" destination="cyK-EY-jlv" id="Pgg-dY-EZN"/>
-                        <outlet property="building6Button" destination="zpM-DU-15N" id="p76-k4-UHM"/>
-                        <outlet property="myBookingsButton" destination="fHH-uv-Nfg" id="PUH-Zc-stu"/>
+                        <outlet property="bookByDateButton" destination="D1i-uj-yES" id="sbf-ef-sbu"/>
+                        <outlet property="building11Button" destination="v4E-sH-wpy" id="c1E-m9-vCI"/>
+                        <outlet property="building2Button" destination="Ehu-BF-8wa" id="9ei-MN-UB9"/>
+                        <outlet property="building6Button" destination="EHw-Sv-Gkj" id="edY-Jq-3ey"/>
+                        <outlet property="upcomingBookingButton" destination="7Ic-wE-dtA" id="hnr-Vc-hvg"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="c4g-U4-94z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SrB-6G-rwb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="776.81159420289862" y="83.705357142857139"/>
+            <point key="canvasLocation" x="869.56521739130437" y="83.705357142857139"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Building11" width="263" height="364"/>
+        <image name="Building2" width="600" height="600"/>
+        <image name="Building6" width="576" height="580"/>
         <image name="UTSLogo" width="182" height="182"/>
         <image name="UTSPattern" width="1380" height="578"/>
         <image name="image 3" width="183" height="335"/>
