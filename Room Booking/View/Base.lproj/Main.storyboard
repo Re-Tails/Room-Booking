@@ -325,7 +325,6 @@
         <!--Booking-->
         <scene sceneID="B3w-gA-SmB">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="c4g-U4-94z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="0WR-1z-Fee" customClass="BookingMainViewController" customModule="Room_Booking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nqD-0Y-v9v">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -395,6 +394,7 @@
                         <outlet property="myBookingsButton" destination="fHH-uv-Nfg" id="PUH-Zc-stu"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c4g-U4-94z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="776.81159420289862" y="83.705357142857139"/>
         </scene>
