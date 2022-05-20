@@ -85,7 +85,12 @@ class TimeBookingViewController: UIViewController, UICollectionViewDataSource, U
             return button
         }()
             @objc func someButtonAction() {
-                print("Button is tapped")
+                //print("Button is tapped")
+                confirmButton.backgroundColor = UIColor.systemGray
+                confirmButton.setTitle("Booked", for: .normal)
+                confirmButton.setTitleColor(UIColor.white, for: .normal)
+                
+                
             }
 
         let stackView: UIStackView = {
