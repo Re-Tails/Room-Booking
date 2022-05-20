@@ -15,7 +15,7 @@ class BookingDatabase {
     var b2: [Int] = []
     var b11: [Int] = []
     
-    var bookings: [Boo]
+    var bookings: [Booking] = []
     
     func addBooking(building: String, level: String, room: String, start_time: BookingTime, end_time: BookingTime) {
         let object: [String: Any] = [

@@ -6,22 +6,28 @@
 //
 
 import Foundation
-class Booking {
+
+// example:
+//    let booking: Booking = Booking("6.5.101", "10:00", "11:30")
+
+class Booking: CustomStringConvertible {
     
-    var building: Int?
-    var level: Int?
-    var room: Int?
+    var building: String = ""
+    var level: String = ""
+    var room: String = ""
     
-    var startHours: Int = 0;
-    var startMinutes: Int = 0;
+    var startTime: BookingTime
+    var endTime: BookingTime
     
-    var endHours: Int = 0;
-    var endMinutes: Int = 0;
+    public var description: String { return "\(building).\(level).\(room) \(startTime) \(endTime)" }
     
-    //init() {
-        //startHours = sh
-        //startMinutes = sm
-        //endHours = eh
-        //endMinutes = em
-    //}
+    init(_ location: String, _ startTime: String, _ endTime: String) {
+        let locationArray: [String] = location.components(separatedBy: ".")
+        building = locationArray[0]
+        level = locationArray[1]
+        room = locationArray[2]
+        
+        self.startTime = BookingTime(startTime)
+        self.endTime = BookingTime(endTime)
+    }
 }

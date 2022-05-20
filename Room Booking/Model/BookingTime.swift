@@ -6,16 +6,15 @@
 //
 
 import Foundation
-class BookingTime {
-    var startHours: Int = 0;
-    var startMinutes: Int = 0;
-    var endHours: Int = 0;
-    var endMinutes: Int = 0;
+class BookingTime: CustomStringConvertible {
+    var hours: String = "";
+    var minutes: String = "";
     
-    init(_ sh: Int, _ sm: Int, _ eh: Int, _ em: Int) {
-        startHours = sh
-        startMinutes = sm
-        endHours = eh
-        endMinutes = em
+    public var description: String { return "\(hours):\(minutes)" }
+    
+    init(_ time: String) {
+        let timeArray = time.components(separatedBy: ":")
+        hours = timeArray[0]
+        minutes = timeArray[1]
     }
 }
