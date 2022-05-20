@@ -39,6 +39,16 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
 
     @IBAction func searchDatabase(_ sender: Any) {
+        
+        // this function looks at the values of input and does stuff
+        func lookAtDatabase(){
+            
+        }
+        
+        
+        
+        
+        
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 10, left: 3, bottom: 330, right: 5)
         layout.itemSize = CGSize(width: view.frame.width, height: 147)
