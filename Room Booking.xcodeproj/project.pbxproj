@@ -18,10 +18,9 @@
 		83BEF31128320CCD00C7ADF4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BEF31028320CCD00C7ADF4 /* LoginViewController.swift */; };
 		D1351AB32836364000D7B86C /* BookingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1351AB22836364000D7B86C /* BookingController.swift */; };
 		D147D21728375D230050ADD4 /* BookingCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D147D21628375D230050ADD4 /* BookingCollectionView.swift */; };
-		D147D21A28375E9D0050ADD4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D147D21928375E9D0050ADD4 /* HomeViewController.swift */; };
 		D16B4FE02834D5D100428A6E /* BookingMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16B4FDF2834D5D100428A6E /* BookingMainViewController.swift */; };
 		D16B4FE22834D5E500428A6E /* MyBookingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16B4FE12834D5E500428A6E /* MyBookingsViewController.swift */; };
-		D1E7C4F62836155600324E0A /* SearchBookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7C4F52836155600324E0A /* SearchBookingViewController.swift */; };
+		D1E7C4F62836155600324E0A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7C4F52836155600324E0A /* HomeViewController.swift */; };
 		D1E7C4F82836198A00324E0A /* ExperimentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7C4F72836198A00324E0A /* ExperimentViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,10 +38,9 @@
 		83BEF31028320CCD00C7ADF4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D1351AB22836364000D7B86C /* BookingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingController.swift; sourceTree = "<group>"; };
 		D147D21628375D230050ADD4 /* BookingCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingCollectionView.swift; sourceTree = "<group>"; };
-		D147D21928375E9D0050ADD4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D16B4FDF2834D5D100428A6E /* BookingMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingMainViewController.swift; sourceTree = "<group>"; };
 		D16B4FE12834D5E500428A6E /* MyBookingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookingsViewController.swift; sourceTree = "<group>"; };
-		D1E7C4F52836155600324E0A /* SearchBookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBookingViewController.swift; sourceTree = "<group>"; };
+		D1E7C4F52836155600324E0A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D1E7C4F72836198A00324E0A /* ExperimentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,8 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				83A0E2842828C0BA0092E39B /* ViewController.swift */,
-				D147D21928375E9D0050ADD4 /* HomeViewController.swift */,
-				D1E7C4F52836155600324E0A /* SearchBookingViewController.swift */,
+				D1E7C4F52836155600324E0A /* HomeViewController.swift */,
 				D16B4FE12834D5E500428A6E /* MyBookingsViewController.swift */,
 				D1E7C4F72836198A00324E0A /* ExperimentViewController.swift */,
 				D16B4FDF2834D5D100428A6E /* BookingMainViewController.swift */,
@@ -202,8 +199,7 @@
 				D1E7C4F82836198A00324E0A /* ExperimentViewController.swift in Sources */,
 				83A0E2832828C0BA0092E39B /* SceneDelegate.swift in Sources */,
 				83A0E2982828C7E10092E39B /* RoundButton.swift in Sources */,
-				D1E7C4F62836155600324E0A /* SearchBookingViewController.swift in Sources */,
-				D147D21A28375E9D0050ADD4 /* HomeViewController.swift in Sources */,
+				D1E7C4F62836155600324E0A /* HomeViewController.swift in Sources */,
 				D16B4FE02834D5D100428A6E /* BookingMainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
