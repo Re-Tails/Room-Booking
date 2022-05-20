@@ -1,22 +1,54 @@
 //
-//  MyBookingsViewController.swift
+//  SearchBookingViewController.swift
 //  Room Booking
 //
-//  Created by Zachary Meissner on 18/5/2022.
+//  Created by Zachary Meissner on 19/5/2022.
 //
 import UIKit
 
-class MyBookingsViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class HomeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
-    @IBOutlet weak var bookingContainer: UIView!
+    @IBOutlet weak var dateTextField: RoundTextField!
+    @IBOutlet weak var fromTextField: UITextField!
+    @IBOutlet weak var searchButton: RoundButton!
+    @IBOutlet weak var toTextField: UITextField!
+    @IBOutlet weak var containerView: UIView!
     
+    //@IBOutlet weak var collectionview: UICollectionView!
     var collectionview: UICollectionView!
     var cellId = "Cell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        searchButton.setColors(bgColor: UIColor.init(named: "SharedBlue")!, tintColor: .white, titleColor: .white)
+        searchButton.setTitle("Search", for: .normal)
+        dateTextField.setSFImage(SFSymbolSystemName: "calender", pointSize: 20, placement: .trailing, imagePadding: 5)
+        
+        // Create an instance of UICollectionViewFlowLayout since you cant
+        // Initialize UICollectionViewwithout a layout
+        
+        // If search button is clicked.... put this into a method
 
+    
+
+        func prepare(imageNo: String, buildingNo: Int, floorNo: Int, roomNo: Int, dateNo: Int, startTime: Int, endTime: Int){
+            
+        }
+    
+    }
+
+    @IBAction func searchDatabase(_ sender: Any) {
+        
+        // this function looks at the values of input and does stuff
+        func lookAtDatabase(){
+            
+        }
+        
+        
+        
+        
+        
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 10, left: 3, bottom: 330, right: 5)
         layout.itemSize = CGSize(width: view.frame.width, height: 147)
@@ -28,7 +60,7 @@ class MyBookingsViewController: UIViewController, UICollectionViewDataSource, UI
         collectionview.showsVerticalScrollIndicator = false
         collectionview.backgroundColor = UIColor.white
         self.view.addSubview(collectionview)
-        bookingContainer.addSubview(collectionview)
+        containerView.addSubview(collectionview)
             }
             
             func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -186,4 +218,10 @@ class MyBookingsViewController: UIViewController, UICollectionViewDataSource, UI
         }
 
     }
-}
+    }
+
+
+
+
+
+
