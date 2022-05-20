@@ -10,10 +10,11 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
 
     @IBOutlet weak var dateTextField: RoundTextField!
     @IBOutlet weak var fromTextField: UITextField!
-    @IBOutlet weak var bookingStack: UIStackView!
     @IBOutlet weak var searchButton: RoundButton!
     @IBOutlet weak var toTextField: UITextField!
+    @IBOutlet weak var containerView: UIView!
     
+    //@IBOutlet weak var collectionview: UICollectionView!
     var collectionview: UICollectionView!
     var cellId = "Cell"
     
@@ -23,27 +24,26 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         searchButton.setColors(bgColor: UIColor.init(named: "SharedBlue")!, tintColor: .white, titleColor: .white)
         searchButton.setTitle("Search", for: .normal)
         dateTextField.setSFImage(SFSymbolSystemName: "calender", pointSize: 20, placement: .trailing, imagePadding: 5)
-        //for i in 0...5 {
-        //let label = UILabel(frame: CGRect(x: 0, y: i * 30, width: 200, height: 21))
-        //label.center = CGPoint(x: 160, y: 285)
-       // label.textAlignment = .center
-       // label.text = "I'm a test label"
-                // Create an instance of UICollectionViewFlowLayout since you cant
-                // Initialize UICollectionView without a layout
-                let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-                layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-                layout.itemSize = CGSize(width: view.frame.width, height: 147)
+        
+        // Create an instance of UICollectionViewFlowLayout since you cant
+        // Initialize UICollectionViewwithout a layout
+        
+        
+        
+        // If search button is clicked.... put this into a method
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        layout.itemSize = CGSize(width: view.frame.width, height: 147)
 
-                collectionview = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
-                collectionview.dataSource = self
-                collectionview.delegate = self
-                collectionview.register(FreelancerCell.self, forCellWithReuseIdentifier: cellId)
-                collectionview.showsVerticalScrollIndicator = false
-                collectionview.backgroundColor = UIColor.white
-                self.view.addSubview(collectionview)
-
+        collectionview = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
+        collectionview.dataSource = self
+        collectionview.delegate = self
+        collectionview.register(FreelancerCell.self, forCellWithReuseIdentifier: cellId)
+        collectionview.showsVerticalScrollIndicator = false
+        collectionview.backgroundColor = UIColor.white
+        self.view.addSubview(collectionview)
+        containerView.addSubview(collectionview)
             }
-            
             
             func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
                 let cell = collectionview.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! FreelancerCell
@@ -74,7 +74,6 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
                 imageView.backgroundColor = UIColor.white
                 imageView.image = UIImage(named: "image 3")
                 imageView.frame = CGRect(x: 0, y: 0, width: 150, height: 150)
-                let screenSize: CGRect = UIScreen.main.bounds
                 return imageView
             }()
             

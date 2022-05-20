@@ -186,17 +186,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RdI-kF-rVr">
-                                <rect key="frame" x="35" y="359" width="355" height="467"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XfL-Ao-kFR">
+                                <rect key="frame" x="0.0" y="338" width="414" height="558"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </stackView>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8FY-QQ-MLr"/>
                         <color key="backgroundColor" name="GrayBackground"/>
                     </view>
                     <navigationItem key="navigationItem" title="Book by Date" id="FSA-qu-reK"/>
                     <connections>
-                        <outlet property="bookingStack" destination="RdI-kF-rVr" id="kuB-9R-60G"/>
+                        <outlet property="containerView" destination="XfL-Ao-kFR" id="0cp-0C-Lml"/>
                         <outlet property="dateTextField" destination="kVJ-4H-OYx" id="4IN-LC-qNF"/>
                         <outlet property="fromTextField" destination="Bdc-Tx-HVH" id="Mxe-4L-5CK"/>
                         <outlet property="searchButton" destination="rF2-nv-gIB" id="YIc-td-GFa"/>
