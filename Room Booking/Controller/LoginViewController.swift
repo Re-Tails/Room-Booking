@@ -27,27 +27,19 @@ class LoginViewController: ViewController {
         passwordTextField.setSFImage(SFSymbolSystemName: "lock", pointSize: 20, placement: .trailing, imagePadding: 5)
         
         //bd.deleteBooking(booking: test)
+        let b1: Booking = Booking("06_06_113", "12:00", "13:00")
+        let b2: Booking = Booking("01_02_123", "13:00", "14:00")
+        let b3: Booking = Booking("05_05_101", "13:30", "15:00")
         
-        let group = DispatchGroup()
-        group.enter()
-        DispatchQueue.global(qos: .userInitiated).async {
-            // Do work asyncly and call group.leave() after you are done
-            let test: Booking = Booking("06_06_113", "12:00", "13:00")
-            self.bd.addBooking(booking: test)
-            self.bd.getBooking(booking: test)
-            group.leave()
-        }
-        group.notify(queue: .main, execute: {
-            // This will be called when block ends
-            print("testiboi", self.bd.testiboi)
+        bd.addBooking(booking: b1)
+        bd.addBooking(booking: b2)
+        bd.addBooking(booking: b3)
+        
+        bd.fetchTimes(booking: b2, completionHandler: {
+            print("times from booking (\(b2)): \(self.bd.times)")
         })
-        
-        // NEED A DELAY FOR NO REASON
-        
-        //let seconds = 0.1
-        //DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
-            //print(self.bd.testiboi)
-        //}
+        //self.bd.getBooking(booking: test)
+        //print("testiboi", self.bd.testiboi)
     }
 
 

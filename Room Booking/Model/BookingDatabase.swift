@@ -18,7 +18,7 @@ class BookingDatabase {
     var b2: [String] =  ["02_06_167"]
     var b11: [String] = ["11_05_300"]
     
-    var testiboi: Any = []
+    var times: [String] = []
         
     func addBooking(booking: Booking) {
         // key is 06.06.113
@@ -28,22 +28,22 @@ class BookingDatabase {
             "times": ["10_00", "10_30", "10_30", "11_00"]
         ]
         
-        database.child("06_06_113").setValue(object)
+        database.child(booking.location.description).setValue(object)
     }
     
-    func someFuck(values: [String]) {
-        testiboi = values
-    }
-    
-    func getBooking(booking: Booking) {
-        print("searching for \(booking.location.description)")
-        database.child(booking.location.description).observeSingleEvent(of: .value, with: { snapshot in
-            if let value = snapshot.value as? [String: [String]] {
-                self.testiboi = value["times"]!
+    func fetchTimes(booking: Booking, completionHandler: @escaping (() -> ())) {
+        self.ref.child(booking.location.description).observeSingleEvent(of: .value) { (snapshot) in
+            if snapshot.exists(){
+                if let value = snapshot.value as? [String: [String]] {
+                    self.times = value["times"]!
+                }
+   
+                completionHandler()
+            } else {
+                print("No times found for location \(booking.location.description)")
+                completionHandler()
             }
-            
-            //print("Value \(value)")
-        })
+        }
     }
     
     func deleteBooking(booking: Booking) {
