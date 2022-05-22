@@ -14,6 +14,7 @@ class TimeBookingViewController: UIViewController, UICollectionViewDataSource, U
     @IBOutlet weak var rightButton: UIButton!
     @IBOutlet weak var roomLabel: UILabel!
     @IBOutlet weak var timeContainer: UIView!
+    @IBOutlet weak var buildingNumberLabel: UILabel!
     
     var collectionview: UICollectionView!
     var currentBuildingNumber:String = ""
@@ -26,6 +27,7 @@ class TimeBookingViewController: UIViewController, UICollectionViewDataSource, U
         layout.sectionInset = UIEdgeInsets(top: 10, left: 5, bottom: 330, right: 5)
         layout.itemSize = CGSize(width: 175, height: 25)
         print(currentBuildingNumber)
+        buildingNumberLabel.text = "Building " + currentBuildingNumber
 
         collectionview = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
         collectionview.dataSource = self
