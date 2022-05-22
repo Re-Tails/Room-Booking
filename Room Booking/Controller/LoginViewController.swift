@@ -23,16 +23,6 @@ class LoginViewController: ViewController {
         studentIDTextField.setSFImage(SFSymbolSystemName: "person", pointSize: 20, placement: .trailing, imagePadding: 5)
         
         passwordTextField.setSFImage(SFSymbolSystemName: "lock", pointSize: 20, placement: .trailing, imagePadding: 5)
-        
-        let bd: BookingDatabase = BookingDatabase(room: BLocation("06_06_113"))
-        
-        bd.addBooking(time: BTime("12:00"))
-        bd.addBooking(time: BTime("13:00"))
-        bd.addBooking(time: BTime("14:00"))
-        bd.addBooking(time: BTime("13:30"))
-        bd.addBooking(time: BTime("15:00"))
-        bd.deleteBooking(time: BTime("14:00"))
-        bd.submitBooking()
     }
 
 
