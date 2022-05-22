@@ -16,6 +16,7 @@ class TimeBookingViewController: UIViewController, UICollectionViewDataSource, U
     @IBOutlet weak var timeContainer: UIView!
     
     var collectionview: UICollectionView!
+    var currentBuildingNumber:String = ""
     var cellId = "Cell"
     
     override func viewDidLoad() {
@@ -24,6 +25,7 @@ class TimeBookingViewController: UIViewController, UICollectionViewDataSource, U
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 10, left: 5, bottom: 330, right: 5)
         layout.itemSize = CGSize(width: 175, height: 25)
+        print(currentBuildingNumber)
 
         collectionview = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
         collectionview.dataSource = self
@@ -81,7 +83,7 @@ class TimeBookingViewController: UIViewController, UICollectionViewDataSource, U
             button.layer.borderWidth = 1
             button.layer.borderColor = UIColor.black.cgColor
             button.translatesAutoresizingMaskIntoConstraints = false
-            button.addTarget(self, action: #selector(someButtonAction), for: .touchUpInside)
+            button.addTarget(TimeBookingViewController.FreelancerCell.self, action: #selector(someButtonAction), for: .touchUpInside)
             return button
         }()
             @objc func someButtonAction() {

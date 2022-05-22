@@ -34,4 +34,19 @@ class DashboardViewController: ViewController {
         bookByDateButton.setColors(bgColor: UIColor.init(named: "SharedBlue")!, tintColor: .white, titleColor: .white)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToBuilding02" {
+            let VC = segue.destination as! TimeBookingViewController
+            VC.currentBuildingNumber = "02"
+        }
+        if segue.identifier == "goToBuilding11" {
+            let VC = segue.destination as! TimeBookingViewController
+            VC.currentBuildingNumber = "11"
+        }
+        if segue.identifier == "goToBuilding06" {
+            let VC = segue.destination as! TimeBookingViewController
+            VC.currentBuildingNumber = "06"
+        }
+    }
+    
 }
