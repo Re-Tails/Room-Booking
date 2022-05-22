@@ -7,12 +7,14 @@
 
 import Foundation
 class BTime: CustomStringConvertible {
-    var hours: String = "";
-    var minutes: String = "";
+    var hours: String = ""
+    var minutes: String = ""
     
     public var description: String { return "\(hours):\(minutes)" }
     
     init(_ time: String) {
+        //2022:05:22:21:15
+        //yyyy:mo:dd:hh:mi
         let timeArray = time.components(separatedBy: ":")
         hours = timeArray[0]
         minutes = timeArray[1]

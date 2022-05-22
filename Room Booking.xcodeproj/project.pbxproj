@@ -17,6 +17,7 @@
 		83A0E2982828C7E10092E39B /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A0E2972828C7E10092E39B /* RoundButton.swift */; };
 		83BEF30F2831FF6B00C7ADF4 /* RoundTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BEF30E2831FF6B00C7ADF4 /* RoundTextField.swift */; };
 		83BEF31128320CCD00C7ADF4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BEF31028320CCD00C7ADF4 /* LoginViewController.swift */; };
+		C2B205EC3EEAC23A3919AF1B /* Pods_Room_Booking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06C896CB0884E652079D229B /* Pods_Room_Booking.framework */; };
 		D1351AB32836364000D7B86C /* BookingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1351AB22836364000D7B86C /* BookingController.swift */; };
 		D147D21728375D230050ADD4 /* BookingCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D147D21628375D230050ADD4 /* BookingCollectionView.swift */; };
 		D147D22028379BD90050ADD4 /* TimeBookingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D147D21F28379BD90050ADD4 /* TimeBookingController.swift */; };
@@ -24,13 +25,7 @@
 		D16B4FE22834D5E500428A6E /* MyBookingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16B4FE12834D5E500428A6E /* MyBookingsViewController.swift */; };
 		D1E7C4F62836155600324E0A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7C4F52836155600324E0A /* HomeViewController.swift */; };
 		D1E7C4F82836198A00324E0A /* ExperimentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7C4F72836198A00324E0A /* ExperimentViewController.swift */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXFileReference section */
-		4E26969328337FA80093BC85 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
-		C2B205EC3EEAC23A3919AF1B /* Pods_Room_Booking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06C896CB0884E652079D229B /* Pods_Room_Booking.framework */; };
-		D16B4FE02834D5D100428A6E /* BookingMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16B4FDF2834D5D100428A6E /* BookingMainViewController.swift */; };
-		D16B4FE22834D5E500428A6E /* MyBookingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16B4FE12834D5E500428A6E /* MyBookingsViewController.swift */; };
+		EF298367283A5FA3001DF267 /* BDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF298366283A5FA3001DF267 /* BDate.swift */; };
 		EF59259F2836400F002EF777 /* BookingDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF59259E2836400F002EF777 /* BookingDatabase.swift */; };
 		EF5925A1283641E5002EF777 /* BTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5925A0283641E5002EF777 /* BTime.swift */; };
 		EF5925A328364B63002EF777 /* Booking.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5925A228364B63002EF777 /* Booking.swift */; };
@@ -41,6 +36,7 @@
 /* Begin PBXFileReference section */
 		06C896CB0884E652079D229B /* Pods_Room_Booking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Room_Booking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		368BACD77E6EE63DECD100C4 /* Pods-Room Booking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Room Booking.debug.xcconfig"; path = "Target Support Files/Pods-Room Booking/Pods-Room Booking.debug.xcconfig"; sourceTree = "<group>"; };
+		4E26969328337FA80093BC85 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		77FF2E5BE5F8E03F8D979052 /* Pods-Room Booking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Room Booking.release.xcconfig"; path = "Target Support Files/Pods-Room Booking/Pods-Room Booking.release.xcconfig"; sourceTree = "<group>"; };
 		83A0E27D2828C0BA0092E39B /* Room Booking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Room Booking.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83A0E2802828C0BA0092E39B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,8 +56,7 @@
 		D16B4FE12834D5E500428A6E /* MyBookingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookingsViewController.swift; sourceTree = "<group>"; };
 		D1E7C4F52836155600324E0A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D1E7C4F72836198A00324E0A /* ExperimentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentViewController.swift; sourceTree = "<group>"; };
-		D16B4FDF2834D5D100428A6E /* BookingMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingMainViewController.swift; sourceTree = "<group>"; };
-		D16B4FE12834D5E500428A6E /* MyBookingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookingsViewController.swift; sourceTree = "<group>"; };
+		EF298366283A5FA3001DF267 /* BDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDate.swift; sourceTree = "<group>"; };
 		EF59259E2836400F002EF777 /* BookingDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDatabase.swift; sourceTree = "<group>"; };
 		EF5925A0283641E5002EF777 /* BTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTime.swift; sourceTree = "<group>"; };
 		EF5925A228364B63002EF777 /* Booking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Booking.swift; sourceTree = "<group>"; };
@@ -135,6 +130,7 @@
 				EF5925A0283641E5002EF777 /* BTime.swift */,
 				EF5925A228364B63002EF777 /* Booking.swift */,
 				EFDA15B928377927006FEE4E /* BLocation.swift */,
+				EF298366283A5FA3001DF267 /* BDate.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -287,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83BEF31128320CCD00C7ADF4 /* LoginViewController.swift in Sources */,
+				EF298367283A5FA3001DF267 /* BDate.swift in Sources */,
 				4E26969428337FA80093BC85 /* DashboardViewController.swift in Sources */,
 				D1351AB32836364000D7B86C /* BookingController.swift in Sources */,
 				D147D21728375D230050ADD4 /* BookingCollectionView.swift in Sources */,
