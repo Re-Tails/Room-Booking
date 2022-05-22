@@ -14,27 +14,29 @@ class BookingDatabase {
     var ref: DatabaseReference! = Database.database().reference()
     var databaseHandle: DatabaseHandle?
     
-    var b6: [String] =  ["06_06_113"]
-    var b2: [String] =  ["02_06_167"]
-    var b11: [String] = ["11_05_300"]
-    
     var times: [String] = []
+    var addedTimes: [String] = []
+    var room: BLocation
+    
+    init(room: BLocation) {
+        self.room = room
+    }
         
-    func addBooking(booking: Booking) {
-        // key is 06.06.113
-        // value is [(10:00 -> 10:30), (10:30 -> 11:00)]
-        
-        let b: Booking = booking
-        fetchTimes(booking: b, completionHandler: {
-            var new_times = self.times
-            new_times.append(b.startTime.description)
-            new_times = Array(Set(new_times))
-            self.database.child(booking.location.description).setValue(new_times)
+    func addBooking(time: BTime) {
+        addedTimes.append(time.description)
+    }
+    
+    func submitBooking() {
+        fetchTimes(location: room, completionHandler: {
+            var newTimes = self.times + self.addedTimes
+            newTimes = Array(Set(newTimes))
+            print("newTimes \(newTimes)")
+            self.database.child(self.room.description).setValue(newTimes)
         })
     }
     
-    func fetchTimes(booking: Booking, completionHandler: @escaping (() -> ())) {
-        self.ref.child(booking.location.description).observeSingleEvent(of: .value) { (snapshot) in
+    func fetchTimes(location: BLocation, completionHandler: @escaping (() -> ())) {
+        self.ref.child(location.description).observeSingleEvent(of: .value) { (snapshot) in
             if snapshot.exists(){
                 if let value = snapshot.value as? [String] {
                     self.times = value
@@ -42,13 +44,15 @@ class BookingDatabase {
    
                 completionHandler()
             } else {
-                print("No times found for location \(booking.location.description)")
+                print("No times found for location \(location.description)")
                 completionHandler()
             }
         }
     }
     
-    func deleteBooking(booking: Booking) {
-        database.child(booking.location.description).removeValue()
+    func deleteBooking(time: BTime) {
+        if let index = addedTimes.firstIndex(of: time.description) {
+            addedTimes.remove(at: index)
+        }
     }
 }
