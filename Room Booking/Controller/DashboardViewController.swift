@@ -21,6 +21,16 @@ class DashboardViewController: ViewController {
         upcomingBookingButton.setColors(bgColor: .white, tintColor: .white, titleColor: .black)
         upcomingBookingButton.setTitle("No booking", for: .normal)
         
+        let bookRoom = UserDefaults.standard.string(forKey: "room")
+        let bookDate = UserDefaults.standard.string(forKey: "date")
+        let bookStart = UserDefaults.standard.string(forKey: "start")
+        let bookEnd = UserDefaults.standard.string(forKey: "end")
+        
+        if (bookRoom != nil) {
+            upcomingBookingButton.setTitle(bookRoom! + " on " + bookDate! + " at " + bookStart!, for: .normal)
+        }
+        
+        
         building11Button.setColors(bgColor: UIColor.init(named: "SharedBlue")!, tintColor: .white, titleColor: .white)
         building11Button.setTitle(" Building 11", for: .normal)
 

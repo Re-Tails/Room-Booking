@@ -23,7 +23,23 @@ class LoginViewController: ViewController {
         studentIDTextField.setSFImage(SFSymbolSystemName: "person", pointSize: 20, placement: .trailing, imagePadding: 5)
         
         passwordTextField.setSFImage(SFSymbolSystemName: "lock", pointSize: 20, placement: .trailing, imagePadding: 5)
+        
+        loginButton.addTarget(self, action: #selector(loginButtonAction), for: .touchUpInside)
     }
 
+    @objc func loginButtonAction(login:UIButton) {
+        print(studentIDTextField.text)
+        print(passwordTextField.text)
+        if (studentIDTextField.text == "12345" && passwordTextField.text == "12345") {
+
+        }
+        
+    }
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if (studentIDTextField.text == "12345" && passwordTextField.text == "12345") {
+            return true
+        }
+        return false
+    }
 
 }

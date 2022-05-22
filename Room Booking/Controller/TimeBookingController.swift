@@ -85,7 +85,7 @@ class TimeBookingViewController: UIViewController, UICollectionViewDataSource, U
             button.layer.borderWidth = 1
             button.layer.borderColor = UIColor.black.cgColor
             button.translatesAutoresizingMaskIntoConstraints = false
-            button.addTarget(TimeBookingViewController.FreelancerCell.self, action: #selector(someButtonAction), for: .touchUpInside)
+            button.addTarget(self, action: #selector(someButtonAction), for: .touchUpInside)
             return button
         }()
             @objc func someButtonAction() {

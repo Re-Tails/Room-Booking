@@ -14,9 +14,17 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     @IBOutlet weak var searchButton: RoundButton!
     @IBOutlet weak var containerView: UIView!
     
+    var availableRooms = [String]()
+    var roomIndex = 0
+    
     //@IBOutlet weak var collectionview: UICollectionView!
     var collectionview: UICollectionView!
     var cellId = "Cell"
+    
+    var dateString = ""
+    var fromTime = ""
+    var toTime = ""
+    var db:BookingDatabase = BookingDatabase(room: BLocation("00_00_000"))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,40 +48,73 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
 
     @IBAction func searchDatabase(_ sender: Any) {
         
-        // this function looks at the values of input and does stuff
-        func lookAtDatabase(){
+        
+        self.db = BookingDatabase(room: BLocation("00_00_000"))
+        let df = DateFormatter()
+        df.dateFormat = "yyyy/MM/dd"
+        dateString = df.string(from: datePicker.date)
+        df.dateFormat = "HH:mm"
+        fromTime = df.string(from:fromTimePicker.date)
+        toTime = df.string(from:toTimePicker.date)
+        availableRooms = db.fetchRooms(checkDate: dateString, checkStart: fromTime, checkEnd: toTime)
             
-        }
-        
-        var db = BookingDatabase(room: BLocation("00_00_000"))
-        db.fetchRooms()
-        
-        
-        
-        
-        
-        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 10, left: 3, bottom: 330, right: 5)
-        layout.itemSize = CGSize(width: view.frame.width, height: 147)
+        let timer = Timer.scheduledTimer(withTimeInterval: 3, repeats: false) {
+            timer in
+            
+            self.availableRooms = self.db.availableRooms
+            print(self.db.availableRooms)
+            
+            let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+            layout.sectionInset = UIEdgeInsets(top: 10, left: 3, bottom: 330, right: 5)
+            layout.itemSize = CGSize(width: self.view.frame.width, height: 147)
 
-        collectionview = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
-        collectionview.dataSource = self
-        collectionview.delegate = self
-        collectionview.register(FreelancerCell.self, forCellWithReuseIdentifier: cellId)
-        collectionview.showsVerticalScrollIndicator = false
-        collectionview.backgroundColor = UIColor.white
-        self.view.addSubview(collectionview)
-        containerView.addSubview(collectionview)
-            }
-            
-            func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+            self.collectionview = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
+            self.collectionview.dataSource = self
+            self.collectionview.delegate = self
+            self.collectionview.register(FreelancerCell.self, forCellWithReuseIdentifier: self.cellId)
+            self.collectionview.showsVerticalScrollIndicator = false
+            self.collectionview.backgroundColor = UIColor.white
+            self.view.addSubview(self.collectionview)
+            self.containerView.addSubview(self.collectionview)
+        }
+
+        }
+    
+        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
                 let cell = collectionview.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! FreelancerCell
+                
+                cell.buildingLabel.text = availableRooms[roomIndex]
+            cell.dateLabel.text = dateString
+            cell.timeLabel.text = fromTime + " - " + toTime
+            UserDefaults.standard.set(availableRooms[roomIndex], forKey: "room")
+            UserDefaults.standard.set(dateString, forKey: "date")
+            UserDefaults.standard.set(fromTime, forKey: "start")
+            UserDefaults.standard.set(toTime, forKey: "end")
+            cell.confirmButton.addTarget(self, action: #selector(submitButtonAction), for: .touchUpInside)
+            
+            
+                roomIndex = roomIndex + 1
+                 
                 return cell
             }
+    @objc func submitButtonAction(submitButton:UIButton) {
+        //print("Button is tapped")
+        submitButton.backgroundColor = UIColor.systemGray
+        submitButton.setTitle("Booked", for: .normal)
+        submitButton.setTitleColor(UIColor.white, for: .normal)
+        let bookRoom = UserDefaults.standard.string(forKey: "room")
+        let bookDate = UserDefaults.standard.string(forKey: "date")
+        let bookStart = UserDefaults.standard.string(forKey: "start")
+        let bookEnd = UserDefaults.standard.string(forKey: "end")
+        
+        self.db = BookingDatabase(room: BLocation(bookRoom!))
+        self.db.addBooking(date: bookDate!, startTime: bookStart!, endTime: bookEnd!)
+        
+    }
     
     // This returns the amount of views
-            func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-                return 4
+        func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+                return availableRooms.count
             }
     
         class FreelancerCell: UICollectionViewCell {
@@ -91,7 +132,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             let label = UILabel()
             label.textColor = UIColor.white
             label.font = UIFont.systemFont(ofSize:(18))
-            label.text = "Building/floor/room"
+            
             label.translatesAutoresizingMaskIntoConstraints = false
             return label
         }()
@@ -135,8 +176,10 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             button.setTitleColor(UIColor.white, for: .normal)
             button.backgroundColor = UIColor.lightGray
             button.translatesAutoresizingMaskIntoConstraints = false
+            
             return button
         }()
+            
 
 
 
@@ -156,7 +199,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         }
 
         func addViews(){
-            backgroundColor = UIColor.black
+            backgroundColor = UIColor.gray
 
           //  addSubview(profileImageButton)
             addSubview(dateLabel)

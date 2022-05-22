@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -59,7 +59,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="hCO-hk-Azn" kind="show" id="PDO-UF-fRD"/>
+                                    <segue destination="hCO-hk-Azn" kind="show" id="g9M-dg-Fwu"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IvO-tn-zgT">
@@ -154,10 +154,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XfL-Ao-kFR">
-                                <rect key="frame" x="10" y="338" width="414" height="524"/>
-                                <color key="backgroundColor" name="GrayBackground"/>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="From" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zgy-Qy-Rvq">
                                 <rect key="frame" x="30" y="179" width="44" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -187,32 +183,37 @@
                             <datePicker contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="TUo-ga-ijT">
                                 <rect key="frame" x="74" y="96" width="320" height="45"/>
                             </datePicker>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XfL-Ao-kFR">
+                                <rect key="frame" x="10" y="338" width="394" height="524"/>
+                                <color key="backgroundColor" name="GrayBackground"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8FY-QQ-MLr"/>
                         <color key="backgroundColor" name="GrayBackground"/>
                         <constraints>
+                            <constraint firstItem="8FY-QQ-MLr" firstAttribute="trailing" secondItem="XfL-Ao-kFR" secondAttribute="trailing" constant="10" id="3OB-Py-fa6"/>
                             <constraint firstItem="rF2-nv-gIB" firstAttribute="centerX" secondItem="0Dr-X6-MRv" secondAttribute="centerX" id="6Tf-rL-iJc"/>
                             <constraint firstItem="YaI-IH-evv" firstAttribute="top" secondItem="rF2-nv-gIB" secondAttribute="bottom" constant="30" id="6xD-u8-Yee"/>
                             <constraint firstItem="8FY-QQ-MLr" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="TUo-ga-ijT" secondAttribute="trailing" constant="20" id="9Uf-Et-1bV"/>
                             <constraint firstItem="5tp-N7-ZmZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="CDx-2i-F3f" secondAttribute="trailing" constant="20" id="Aj8-fA-xXL"/>
                             <constraint firstItem="5tp-N7-ZmZ" firstAttribute="centerY" secondItem="CDx-2i-F3f" secondAttribute="centerY" id="B6a-5b-Mhw"/>
+                            <constraint firstItem="XfL-Ao-kFR" firstAttribute="centerX" secondItem="0Dr-X6-MRv" secondAttribute="centerX" id="Bt3-2N-OWi"/>
                             <constraint firstItem="mCF-C8-xYX" firstAttribute="leading" secondItem="8FY-QQ-MLr" secondAttribute="leading" constant="30" id="Cwu-cB-jp7"/>
                             <constraint firstItem="CDx-2i-F3f" firstAttribute="leading" secondItem="Zgy-Qy-Rvq" secondAttribute="trailing" constant="10" id="Dfn-Rc-4yX"/>
                             <constraint firstItem="YaI-IH-evv" firstAttribute="leading" secondItem="8FY-QQ-MLr" secondAttribute="leading" constant="30" id="Eh1-T1-RtZ"/>
                             <constraint firstItem="rF2-nv-gIB" firstAttribute="top" secondItem="CDx-2i-F3f" secondAttribute="bottom" constant="30" id="Jcx-tg-3QE"/>
                             <constraint firstItem="Zgy-Qy-Rvq" firstAttribute="centerY" secondItem="CDx-2i-F3f" secondAttribute="centerY" id="Kes-nD-3mI"/>
-                            <constraint firstItem="XfL-Ao-kFR" firstAttribute="bottom" secondItem="8FY-QQ-MLr" secondAttribute="bottom" id="RvJ-dl-wRr"/>
                             <constraint firstItem="XfL-Ao-kFR" firstAttribute="top" secondItem="YaI-IH-evv" secondAttribute="bottom" constant="5" id="RwL-5C-O7O"/>
                             <constraint firstItem="TUo-ga-ijT" firstAttribute="centerY" secondItem="mCF-C8-xYX" secondAttribute="centerY" id="Sgw-Aa-L6o"/>
                             <constraint firstItem="qhj-UD-V9r" firstAttribute="centerY" secondItem="CDx-2i-F3f" secondAttribute="centerY" id="VuZ-1B-WRz"/>
                             <constraint firstItem="Zgy-Qy-Rvq" firstAttribute="leading" secondItem="mCF-C8-xYX" secondAttribute="leading" id="aaY-V1-DiD"/>
                             <constraint firstItem="qhj-UD-V9r" firstAttribute="leading" secondItem="5tp-N7-ZmZ" secondAttribute="trailing" constant="10" id="ahw-fb-LXt"/>
+                            <constraint firstItem="XfL-Ao-kFR" firstAttribute="bottom" secondItem="8FY-QQ-MLr" secondAttribute="bottom" id="feL-mF-95z"/>
                             <constraint firstItem="Zgy-Qy-Rvq" firstAttribute="top" secondItem="mCF-C8-xYX" secondAttribute="bottom" constant="50" id="h3m-p5-i8b"/>
                             <constraint firstItem="TUo-ga-ijT" firstAttribute="leading" secondItem="mCF-C8-xYX" secondAttribute="trailing" constant="10" id="hla-no-UPs"/>
                             <constraint firstItem="mCF-C8-xYX" firstAttribute="top" secondItem="8FY-QQ-MLr" secondAttribute="top" constant="20" id="ojk-7M-fgw"/>
-                            <constraint firstItem="XfL-Ao-kFR" firstAttribute="leading" secondItem="8FY-QQ-MLr" secondAttribute="leading" constant="10" id="pJV-mf-nyR"/>
-                            <constraint firstItem="XfL-Ao-kFR" firstAttribute="trailing" secondItem="8FY-QQ-MLr" secondAttribute="trailing" constant="10" id="stc-RU-nxD"/>
                             <constraint firstItem="8FY-QQ-MLr" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qhj-UD-V9r" secondAttribute="trailing" constant="20" id="tu2-jt-hE9"/>
+                            <constraint firstItem="XfL-Ao-kFR" firstAttribute="leading" secondItem="8FY-QQ-MLr" secondAttribute="leading" constant="10" id="vYU-GM-03R"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Book by Date" id="FSA-qu-reK"/>
@@ -342,7 +343,7 @@
         <!--Dashboard View Controller-->
         <scene sceneID="gMg-0H-FDA">
             <objects>
-                <viewController id="hCO-hk-Azn" customClass="DashboardViewController" customModule="Room_Booking" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Dashboard" id="hCO-hk-Azn" customClass="DashboardViewController" customModule="Room_Booking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sbg-Hg-ug2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

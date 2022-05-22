@@ -21,25 +21,17 @@ class BookingDatabase {
     var times: [String] = []
     var addedTimes: [String] = []
     var room: BLocation
+    var availableRooms = [String]()
     
     init(room: BLocation) {
         self.room = room
     }
         
-    func addBooking(_ date: BDate, _ startTime: BTime, _ endTime: BTime) {
-        let str: String = "\(date) \(startTime) \(endTime)"
-        print("adding \(str)")
-        addedTimes.append(str)
+    func addBooking(date: String, startTime: String, endTime: String) {
+        let key = self.database.child(self.room.description).childByAutoId()
+        key.setValue(date + " " + startTime + " " + endTime)
     }
     
-    func submitBooking() {
-        fetchTimes(location: room, completionHandler: {
-            var newTimes = self.addedTimes
-            newTimes = Array(Set(newTimes))
-            print("newTimes \(newTimes)")
-            self.database.child(self.room.description).setValue(newTimes)
-        })
-    }
     
     func fetchTimes(location: BLocation, completionHandler: @escaping (() -> ())) {
         self.ref.child(location.description).observeSingleEvent(of: .value) { (snapshot) in
@@ -62,14 +54,76 @@ class BookingDatabase {
         }
     }
     
-    func fetchRooms() {
+    func fetchRooms(checkDate:String, checkStart:String, checkEnd:String) -> Array<String> {
+        var availableRooms = [String]()
         self.database.observeSingleEvent(of: .value, with: {snapshot in
             for currentRoom in snapshot.children {
+                var available = true
                 let cRoom = currentRoom as! DataSnapshot
                 for currentTime in cRoom.children {
+                    let cTime = currentTime as! DataSnapshot
+                    let timeString = cTime.value as! String
+                    let timeArray = timeString.components(separatedBy: " ")
+                    let date = timeArray[0]
+                    let startTime = timeArray[1]
+                    let endTime = timeArray[2]
                     
+                    if(date==checkDate) {
+                        print(checkStart)
+                        print(checkEnd)
+                        print(startTime)
+                        print(endTime)
+                        if (self.checkOverlap(checkStart: checkStart, checkEnd: checkEnd, start: startTime, end: endTime)) {
+                            
+                            print("Overlap")
+                            available = false
+                            
+                        }
+                        else {
+                            print("No overlap")
+                        }
+                    }
+                    
+                }
+                if (available) {
+                    self.availableRooms.append(cRoom.key)
+                    print(cRoom.key)
                 }
             }
         })
+
+        return availableRooms
+    }
+    
+    func checkOverlap(checkStart:String, checkEnd:String, start:String, end:String) -> Bool {
+        let checkStartArray = checkStart.components(separatedBy: ":")
+        let checkStartHour = Int(checkStartArray[0])
+        let checkStartMinute = Int(checkStartArray[1])
+        let checkStartValue = checkStartHour! * 60 + checkStartMinute!
+        
+        let checkEndArray = checkEnd.components(separatedBy: ":")
+        let checkEndHour = Int(checkEndArray[0])
+        let checkEndMinute = Int(checkEndArray[1])
+        let checkEndValue = checkEndHour! * 60 + checkEndMinute!
+        
+        let startArray = start.components(separatedBy: ":")
+        let startHour = Int(startArray[0])
+        let startMinute = Int(startArray[1])
+        let startValue = startHour! * 60 + startMinute!
+        
+        let endArray = end.components(separatedBy: ":")
+        let endHour = Int(endArray[0])
+        let endMinute = Int(endArray[1])
+        let endValue = endHour! * 60 + endMinute!
+        
+        print(checkStartValue)
+        print(checkEndValue)
+        print(startValue)
+        print(endValue)
+        
+        if (checkStartValue <= endValue && checkEndValue >= startValue) {
+            return true
+        }
+        return false
     }
 }
