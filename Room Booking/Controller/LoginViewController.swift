@@ -34,10 +34,11 @@ class LoginViewController: ViewController {
         bd.addBooking(booking: b1)
         bd.addBooking(booking: b2)
         bd.addBooking(booking: b3)
+        bd.addBooking(booking: Booking("06_06_113", "13:50", "12:33"))
         
-        bd.fetchTimes(booking: b2, completionHandler: {
-            print("times from booking (\(b2)): \(self.bd.times)")
-        })
+        //bd.fetchTimes(booking: b2, completionHandler: {
+            //print("times from booking (\(b2)): \(self.bd.times)")
+        //})
         //self.bd.getBooking(booking: test)
         //print("testiboi", self.bd.testiboi)
     }

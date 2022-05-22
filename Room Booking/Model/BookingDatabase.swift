@@ -24,18 +24,20 @@ class BookingDatabase {
         // key is 06.06.113
         // value is [(10:00 -> 10:30), (10:30 -> 11:00)]
         
-        let object: [String: Any] = [
-            "times": ["10_00", "10_30", "10_30", "11_00"]
-        ]
-        
-        database.child(booking.location.description).setValue(object)
+        let b: Booking = booking
+        fetchTimes(booking: b, completionHandler: {
+            var new_times = self.times
+            new_times.append(b.startTime.description)
+            new_times = Array(Set(new_times))
+            self.database.child(booking.location.description).setValue(new_times)
+        })
     }
     
     func fetchTimes(booking: Booking, completionHandler: @escaping (() -> ())) {
         self.ref.child(booking.location.description).observeSingleEvent(of: .value) { (snapshot) in
             if snapshot.exists(){
-                if let value = snapshot.value as? [String: [String]] {
-                    self.times = value["times"]!
+                if let value = snapshot.value as? [String] {
+                    self.times = value
                 }
    
                 completionHandler()
