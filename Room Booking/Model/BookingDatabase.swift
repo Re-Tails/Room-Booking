@@ -14,6 +14,10 @@ class BookingDatabase {
     var ref: DatabaseReference! = Database.database().reference()
     var databaseHandle: DatabaseHandle?
     
+    var b6: [String] = ["06_06_113", "06_04_100", "06_05_112"]
+    var b2: [String] = ["02_06_167", "02_05_102", "02_07_118"]
+    var b11: [String] = ["11_05_300", "11_04_200", "11_06_101"]
+    
     var times: [String] = []
     var addedTimes: [String] = []
     var room: BLocation
@@ -22,13 +26,15 @@ class BookingDatabase {
         self.room = room
     }
         
-    func addBooking(time: BTime) {
-        addedTimes.append(time.description)
+    func addBooking(_ date: BDate, _ startTime: BTime, _ endTime: BTime) {
+        let str: String = "\(date) \(startTime) \(endTime)"
+        print("adding \(str)")
+        addedTimes.append(str)
     }
     
     func submitBooking() {
         fetchTimes(location: room, completionHandler: {
-            var newTimes = self.times + self.addedTimes
+            var newTimes = self.addedTimes
             newTimes = Array(Set(newTimes))
             print("newTimes \(newTimes)")
             self.database.child(self.room.description).setValue(newTimes)
