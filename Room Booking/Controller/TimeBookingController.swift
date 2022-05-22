@@ -20,6 +20,7 @@ class TimeBookingViewController: UIViewController, UICollectionViewDataSource, U
     var currentBuildingNumber:String = ""
     var cellId = "Cell"
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -49,13 +50,62 @@ class TimeBookingViewController: UIViewController, UICollectionViewDataSource, U
                 return 68
             }
     
-        class FreelancerCell: UICollectionViewCell {
+    
+   // func timeLabelI(j : Int) -> Int {
+   //     if j == 00 {
+   //         i = i + 1
+   //     }
+   //     if i == 13 {
+   //         i = 1
+   //     }
+   //     return i
+   // }
+    
+   // func timelabelJ() -> Int {
+   //   j = j + 30
+   //   if (j == 60) {
+   //       j = 00
+   //   }
+   //   return j
+   // }
 
+ 
+        class FreelancerCell: UICollectionViewCell {
+            
+            struct Timelabelinfo {
+               static var hour = 23
+               static var minute = 30
+            }
+            
+            class Timelabelclass {
+                var time = Timelabelinfo()
+                
+                func timehour() -> Int{
+                    TimeBookingViewController.FreelancerCell.Timelabelinfo.minute = TimeBookingViewController.FreelancerCell.Timelabelinfo.minute + 30
+                    if(TimeBookingViewController.FreelancerCell.Timelabelinfo.minute == 60){
+                        TimeBookingViewController.FreelancerCell.Timelabelinfo.hour = TimeBookingViewController.FreelancerCell.Timelabelinfo.hour + 1
+                    }
+                    if(TimeBookingViewController.FreelancerCell.Timelabelinfo.hour == 24){
+                        TimeBookingViewController.FreelancerCell.Timelabelinfo.hour = 0
+                    }
+                    return TimeBookingViewController.FreelancerCell.Timelabelinfo.hour
+                }
+                
+                func timemin() -> Int{
+                    //time.minute = time.minute + 30
+                    if(TimeBookingViewController.FreelancerCell.Timelabelinfo.minute == 60){
+                        TimeBookingViewController.FreelancerCell.Timelabelinfo.minute = 00
+                    }
+                    return TimeBookingViewController.FreelancerCell.Timelabelinfo.minute
+                }
+            }
+            
         let timeLabel: UILabel = {
+            let tim = Timelabelclass()
             let label = UILabel()
             label.textColor = UIColor.black
             label.font = UIFont.systemFont(ofSize:(18))
-            label.text = "TIME"
+            label.text = "\(String(format: "%02d", tim.timehour())):\(String(format: "%02d", tim.timemin()))"
             label.translatesAutoresizingMaskIntoConstraints = false
             return label
         }()
