@@ -132,35 +132,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCF-C8-xYX">
-                                <rect key="frame" x="35" y="110" width="45" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCF-C8-xYX">
+                                <rect key="frame" x="30" y="108" width="40.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kVJ-4H-OYx" customClass="RoundTextField" customModule="Room_Booking" customModuleProvider="target">
-                                <rect key="frame" x="85" y="105" width="305" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="From:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zgy-Qy-Rvq">
-                                <rect key="frame" x="35" y="175" width="45" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qyp-ms-Nir">
-                                <rect key="frame" x="270" y="170" width="120" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rF2-nv-gIB" customClass="RoundButton" customModule="Room_Booking" customModuleProvider="target">
-                                <rect key="frame" x="156.63522012578619" y="250" width="100" height="39.99999999999995"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rF2-nv-gIB" customClass="RoundButton" customModule="Room_Booking" customModuleProvider="target">
+                                <rect key="frame" x="172.5" y="242" width="69" height="31"/>
                                 <color key="backgroundColor" name="SharedBlue"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -169,42 +148,77 @@
                                     <action selector="searchDatabase:" destination="NHn-j0-NNP" eventType="touchUpInside" id="ckG-81-kTJ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tp-N7-ZmZ">
-                                <rect key="frame" x="225" y="175" width="25" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available Rooms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YaI-IH-evv">
+                                <rect key="frame" x="30" y="303" width="186.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XfL-Ao-kFR">
+                                <rect key="frame" x="10" y="338" width="414" height="524"/>
+                                <color key="backgroundColor" name="GrayBackground"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="From" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zgy-Qy-Rvq">
+                                <rect key="frame" x="30" y="179" width="44" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bdc-Tx-HVH">
-                                <rect key="frame" x="85" y="170" width="120" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Available Rooms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YaI-IH-evv">
-                                <rect key="frame" x="30" y="300" width="180" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                            <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="15" translatesAutoresizingMaskIntoConstraints="NO" id="CDx-2i-F3f" userLabel="From Time Picker">
+                                <rect key="frame" x="84" y="167" width="150" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Bft-Kz-z57"/>
+                                </constraints>
+                                <locale key="locale" localeIdentifier="en_GB"/>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="To" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tp-N7-ZmZ">
+                                <rect key="frame" x="225" y="179" width="23" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XfL-Ao-kFR">
-                                <rect key="frame" x="0.0" y="338" width="414" height="558"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
+                            <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="15" translatesAutoresizingMaskIntoConstraints="NO" id="qhj-UD-V9r" userLabel="To Time Picker">
+                                <rect key="frame" x="254" y="167" width="150" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="ASI-EV-qt4"/>
+                                </constraints>
+                                <locale key="locale" localeIdentifier="en_GB"/>
+                            </datePicker>
+                            <datePicker contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="TUo-ga-ijT">
+                                <rect key="frame" x="74" y="96" width="320" height="45"/>
+                            </datePicker>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8FY-QQ-MLr"/>
                         <color key="backgroundColor" name="GrayBackground"/>
+                        <constraints>
+                            <constraint firstItem="rF2-nv-gIB" firstAttribute="centerX" secondItem="0Dr-X6-MRv" secondAttribute="centerX" id="6Tf-rL-iJc"/>
+                            <constraint firstItem="YaI-IH-evv" firstAttribute="top" secondItem="rF2-nv-gIB" secondAttribute="bottom" constant="30" id="6xD-u8-Yee"/>
+                            <constraint firstItem="8FY-QQ-MLr" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="TUo-ga-ijT" secondAttribute="trailing" constant="20" id="9Uf-Et-1bV"/>
+                            <constraint firstItem="5tp-N7-ZmZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="CDx-2i-F3f" secondAttribute="trailing" constant="20" id="Aj8-fA-xXL"/>
+                            <constraint firstItem="5tp-N7-ZmZ" firstAttribute="centerY" secondItem="CDx-2i-F3f" secondAttribute="centerY" id="B6a-5b-Mhw"/>
+                            <constraint firstItem="mCF-C8-xYX" firstAttribute="leading" secondItem="8FY-QQ-MLr" secondAttribute="leading" constant="30" id="Cwu-cB-jp7"/>
+                            <constraint firstItem="CDx-2i-F3f" firstAttribute="leading" secondItem="Zgy-Qy-Rvq" secondAttribute="trailing" constant="10" id="Dfn-Rc-4yX"/>
+                            <constraint firstItem="YaI-IH-evv" firstAttribute="leading" secondItem="8FY-QQ-MLr" secondAttribute="leading" constant="30" id="Eh1-T1-RtZ"/>
+                            <constraint firstItem="rF2-nv-gIB" firstAttribute="top" secondItem="CDx-2i-F3f" secondAttribute="bottom" constant="30" id="Jcx-tg-3QE"/>
+                            <constraint firstItem="Zgy-Qy-Rvq" firstAttribute="centerY" secondItem="CDx-2i-F3f" secondAttribute="centerY" id="Kes-nD-3mI"/>
+                            <constraint firstItem="XfL-Ao-kFR" firstAttribute="bottom" secondItem="8FY-QQ-MLr" secondAttribute="bottom" id="RvJ-dl-wRr"/>
+                            <constraint firstItem="XfL-Ao-kFR" firstAttribute="top" secondItem="YaI-IH-evv" secondAttribute="bottom" constant="5" id="RwL-5C-O7O"/>
+                            <constraint firstItem="TUo-ga-ijT" firstAttribute="centerY" secondItem="mCF-C8-xYX" secondAttribute="centerY" id="Sgw-Aa-L6o"/>
+                            <constraint firstItem="qhj-UD-V9r" firstAttribute="centerY" secondItem="CDx-2i-F3f" secondAttribute="centerY" id="VuZ-1B-WRz"/>
+                            <constraint firstItem="Zgy-Qy-Rvq" firstAttribute="leading" secondItem="mCF-C8-xYX" secondAttribute="leading" id="aaY-V1-DiD"/>
+                            <constraint firstItem="qhj-UD-V9r" firstAttribute="leading" secondItem="5tp-N7-ZmZ" secondAttribute="trailing" constant="10" id="ahw-fb-LXt"/>
+                            <constraint firstItem="Zgy-Qy-Rvq" firstAttribute="top" secondItem="mCF-C8-xYX" secondAttribute="bottom" constant="50" id="h3m-p5-i8b"/>
+                            <constraint firstItem="TUo-ga-ijT" firstAttribute="leading" secondItem="mCF-C8-xYX" secondAttribute="trailing" constant="10" id="hla-no-UPs"/>
+                            <constraint firstItem="mCF-C8-xYX" firstAttribute="top" secondItem="8FY-QQ-MLr" secondAttribute="top" constant="20" id="ojk-7M-fgw"/>
+                            <constraint firstItem="XfL-Ao-kFR" firstAttribute="leading" secondItem="8FY-QQ-MLr" secondAttribute="leading" constant="10" id="pJV-mf-nyR"/>
+                            <constraint firstItem="XfL-Ao-kFR" firstAttribute="trailing" secondItem="8FY-QQ-MLr" secondAttribute="trailing" constant="10" id="stc-RU-nxD"/>
+                            <constraint firstItem="8FY-QQ-MLr" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qhj-UD-V9r" secondAttribute="trailing" constant="20" id="tu2-jt-hE9"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Book by Date" id="FSA-qu-reK"/>
                     <connections>
                         <outlet property="containerView" destination="XfL-Ao-kFR" id="0cp-0C-Lml"/>
-                        <outlet property="dateTextField" destination="kVJ-4H-OYx" id="4IN-LC-qNF"/>
-                        <outlet property="fromTextField" destination="Bdc-Tx-HVH" id="Mxe-4L-5CK"/>
                         <outlet property="searchButton" destination="rF2-nv-gIB" id="YIc-td-GFa"/>
-                        <outlet property="toTextField" destination="qyp-ms-Nir" id="SI2-nz-dIP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sE1-fa-NSg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -331,13 +345,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upcoming Booking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25L-nj-kth" userLabel="Upcoming Bookings Text Field">
-                                <rect key="frame" x="50" y="118" width="275" height="36"/>
+                                <rect key="frame" x="50" y="118" width="275" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="ogD-eO-ejp"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
                                 <color key="textColor" name="SharedBlue"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ic-wE-dtA" userLabel="Upcoming Booking Button" customClass="RoundButton" customModule="Room_Booking" customModuleProvider="target">
-                                <rect key="frame" x="50" y="174" width="314" height="60"/>
+                                <rect key="frame" x="50" y="170" width="314" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="jut-t4-9qy"/>
                                 </constraints>
@@ -348,48 +365,14 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book by Campus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IRP-PQ-ZB6" userLabel="Book by Campus Text Field">
-                                <rect key="frame" x="50" y="264" width="243.5" height="36"/>
+                                <rect key="frame" x="50" y="260" width="243.5" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="rwx-VS-FeJ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
                                 <color key="textColor" name="SharedBlue"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="BQf-aA-LDB">
-                                <rect key="frame" x="50" y="320" width="314" height="382"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4E-sH-wpy" userLabel="Building 11 Button" customClass="RoundButton" customModule="Room_Booking" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="154.5" height="382"/>
-                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Button" backgroundImage="Building11"/>
-                                        <connections>
-                                            <segue destination="wuL-sz-wjy" kind="show" id="3Vv-d5-M6x"/>
-                                        </connections>
-                                    </button>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ln6-MV-BUx">
-                                        <rect key="frame" x="159.5" y="0.0" width="154.5" height="382"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ehu-BF-8wa" userLabel="Building 2 Button" customClass="RoundButton" customModule="Room_Booking" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="154.5" height="188.5"/>
-                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="Button" backgroundImage="Building2"/>
-                                                <connections>
-                                                    <segue destination="wuL-sz-wjy" kind="show" id="c5F-6B-4jS"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EHw-Sv-Gkj" userLabel="Building 6 Button" customClass="RoundButton" customModule="Room_Booking" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="193.5" width="154.5" height="188.5"/>
-                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="Button" backgroundImage="Building6"/>
-                                                <connections>
-                                                    <segue destination="wuL-sz-wjy" kind="show" id="JHe-8w-sMh"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D1i-uj-yES" userLabel="Book by Date" customClass="RoundButton" customModule="Room_Booking" customModuleProvider="target">
                                 <rect key="frame" x="50" y="732" width="314" height="100"/>
                                 <constraints>
@@ -402,6 +385,46 @@
                                     <segue destination="NHn-j0-NNP" kind="show" id="jhU-4W-fS2"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="BQf-aA-LDB">
+                                <rect key="frame" x="50" y="312" width="314" height="390"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4E-sH-wpy" userLabel="Building 11 Button" customClass="RoundButton" customModule="Room_Booking" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="154.5" height="390"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button" backgroundImage="Building11"/>
+                                        <connections>
+                                            <segue destination="wuL-sz-wjy" kind="show" id="3Vv-d5-M6x"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ln6-MV-BUx">
+                                        <rect key="frame" x="159.5" y="0.0" width="154.5" height="390"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ehu-BF-8wa" userLabel="Building 2 Button" customClass="RoundButton" customModule="Room_Booking" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="154.5" height="192.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button" backgroundImage="Building2"/>
+                                                <connections>
+                                                    <segue destination="wuL-sz-wjy" kind="show" id="c5F-6B-4jS"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EHw-Sv-Gkj" userLabel="Building 6 Button" customClass="RoundButton" customModule="Room_Booking" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="197.5" width="154.5" height="192.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button" backgroundImage="Building6"/>
+                                                <connections>
+                                                    <segue destination="wuL-sz-wjy" kind="show" id="JHe-8w-sMh"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="400" id="AGI-7w-2es"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Kdf-1f-Hjt"/>
                         <color key="backgroundColor" name="GrayBackground"/>
@@ -409,7 +432,7 @@
                             <constraint firstItem="BQf-aA-LDB" firstAttribute="centerX" secondItem="Sbg-Hg-ug2" secondAttribute="centerX" id="7B0-HY-A6r"/>
                             <constraint firstItem="Kdf-1f-Hjt" firstAttribute="trailing" secondItem="D1i-uj-yES" secondAttribute="trailing" constant="50" id="8Jw-KI-H5n"/>
                             <constraint firstItem="7Ic-wE-dtA" firstAttribute="centerX" secondItem="Sbg-Hg-ug2" secondAttribute="centerX" id="DDp-0i-6SH"/>
-                            <constraint firstItem="D1i-uj-yES" firstAttribute="top" secondItem="BQf-aA-LDB" secondAttribute="bottom" constant="30" id="E5k-W5-Wq2"/>
+                            <constraint firstItem="D1i-uj-yES" firstAttribute="top" relation="greaterThanOrEqual" secondItem="BQf-aA-LDB" secondAttribute="bottom" constant="30" id="E5k-W5-Wq2"/>
                             <constraint firstItem="IRP-PQ-ZB6" firstAttribute="top" secondItem="7Ic-wE-dtA" secondAttribute="bottom" constant="30" id="EYs-PB-Y7r"/>
                             <constraint firstItem="BQf-aA-LDB" firstAttribute="leading" secondItem="Kdf-1f-Hjt" secondAttribute="leading" constant="50" id="MSt-or-ndn"/>
                             <constraint firstItem="D1i-uj-yES" firstAttribute="centerX" secondItem="Sbg-Hg-ug2" secondAttribute="centerX" id="Uwt-Uj-3fv"/>
@@ -420,7 +443,7 @@
                             <constraint firstItem="D1i-uj-yES" firstAttribute="leading" secondItem="Kdf-1f-Hjt" secondAttribute="leading" constant="50" id="ggY-Je-dSz"/>
                             <constraint firstItem="25L-nj-kth" firstAttribute="leading" secondItem="Kdf-1f-Hjt" secondAttribute="leading" constant="50" id="qtL-US-jMS"/>
                             <constraint firstItem="Kdf-1f-Hjt" firstAttribute="trailing" secondItem="7Ic-wE-dtA" secondAttribute="trailing" constant="50" id="rZC-gM-wtc"/>
-                            <constraint firstItem="BQf-aA-LDB" firstAttribute="top" secondItem="IRP-PQ-ZB6" secondAttribute="bottom" constant="20" id="tSN-fi-xZT"/>
+                            <constraint firstItem="BQf-aA-LDB" firstAttribute="top" relation="greaterThanOrEqual" secondItem="IRP-PQ-ZB6" secondAttribute="bottom" constant="20" id="tSN-fi-xZT"/>
                             <constraint firstItem="7Ic-wE-dtA" firstAttribute="leading" secondItem="Kdf-1f-Hjt" secondAttribute="leading" constant="50" id="uU3-GW-1Ul"/>
                             <constraint firstItem="IRP-PQ-ZB6" firstAttribute="leading" secondItem="Kdf-1f-Hjt" secondAttribute="leading" constant="50" id="zJn-Kv-D59"/>
                         </constraints>
@@ -492,7 +515,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="JHe-8w-sMh"/>
+        <segue reference="3Vv-d5-M6x"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Building11" width="263" height="364"/>

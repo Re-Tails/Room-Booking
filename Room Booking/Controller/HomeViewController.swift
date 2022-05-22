@@ -23,7 +23,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         // Do any additional setup after loading the view.
         searchButton.setColors(bgColor: UIColor.init(named: "SharedBlue")!, tintColor: .white, titleColor: .white)
         searchButton.setTitle("Search", for: .normal)
-        dateTextField.setSFImage(SFSymbolSystemName: "calender", pointSize: 20, placement: .trailing, imagePadding: 5)
+        //dateTextField.setSFImage(SFSymbolSystemName: "calender", pointSize: 20, placement: .trailing, imagePadding: 5)
         
         // Create an instance of UICollectionViewFlowLayout since you cant
         // Initialize UICollectionViewwithout a layout
