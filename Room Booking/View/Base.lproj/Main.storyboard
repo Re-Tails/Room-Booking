@@ -218,7 +218,10 @@
                     <navigationItem key="navigationItem" title="Book by Date" id="FSA-qu-reK"/>
                     <connections>
                         <outlet property="containerView" destination="XfL-Ao-kFR" id="0cp-0C-Lml"/>
+                        <outlet property="datePicker" destination="TUo-ga-ijT" id="Unc-w0-O1N"/>
+                        <outlet property="fromTimePicker" destination="CDx-2i-F3f" id="jSQ-vf-LfD"/>
                         <outlet property="searchButton" destination="rF2-nv-gIB" id="YIc-td-GFa"/>
+                        <outlet property="toTimePicker" destination="qhj-UD-V9r" id="Nxg-aG-2i3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sE1-fa-NSg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -55,4 +55,15 @@ class BookingDatabase {
             addedTimes.remove(at: index)
         }
     }
+    
+    func fetchRooms() {
+        self.database.observeSingleEvent(of: .value, with: {snapshot in
+            for currentRoom in snapshot.children {
+                let cRoom = currentRoom as! DataSnapshot
+                for currentTime in cRoom.children {
+                    
+                }
+            }
+        })
+    }
 }

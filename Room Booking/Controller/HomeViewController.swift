@@ -8,10 +8,10 @@ import UIKit
 
 class HomeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
-    @IBOutlet weak var dateTextField: RoundTextField!
-    @IBOutlet weak var fromTextField: UITextField!
+    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var fromTimePicker: UIDatePicker!
+    @IBOutlet weak var toTimePicker: UIDatePicker!
     @IBOutlet weak var searchButton: RoundButton!
-    @IBOutlet weak var toTextField: UITextField!
     @IBOutlet weak var containerView: UIView!
     
     //@IBOutlet weak var collectionview: UICollectionView!
@@ -44,6 +44,9 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         func lookAtDatabase(){
             
         }
+        
+        var db = BookingDatabase(room: BLocation("00_00_000"))
+        db.fetchRooms()
         
         
         
