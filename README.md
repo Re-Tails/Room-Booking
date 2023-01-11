@@ -1,4 +1,4 @@
-A redesign of UTS room book system for Assignment 3 41889 Application Development in the iOS Environment
+A redesign of the UTS room booking system for Assignment 3 in 41889 Application Development in the iOS Environment
 
 Team members: 
 - Tien Long Lam (13403237): lamtienlong@student.uts.edu.au - Login, dashboard, integration with database, booking by time and date
